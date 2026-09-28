@@ -30,6 +30,11 @@ def load_yaml(p: Path) -> dict:
     return yaml.safe_load(p.read_text(encoding="utf-8")) if p.exists() else {}
 
 
+def _hisse_url(cfg: dict) -> str:
+    u = (cfg.get("portfoy", {}).get("hisse_raporu_url") or "").strip()
+    return u if not u or u.endswith("/") else u + "/"
+
+
 def build_panels(cfg: dict, a: dict) -> list[dict]:
     order: list[str] = []
     for g in cfg["gostergeler"]:
@@ -67,6 +72,10 @@ def main() -> None:
     print("1/4 Veri çekiliyor…")
     raw = load_snapshot(args.snapshot) if args.snapshot else fetch_all(cfg)
     print(f"    {len(raw)} seri alındı")
+    fiyat = sum(1 for k in raw if k.startswith("yahoo:"))
+    if fiyat < 10:
+        raise SystemExit("HATA: Piyasa verisi alınamadı (Yahoo). Rapor boş olacağı için yayınlanmadı. "
+                         "Birkaç dakika sonra tekrar çalıştır; sürerse günlükteki '!' satırlarını kontrol et.")
     if args.save_raw:
         save_snapshot(raw, DATA / "raw_latest.json")
 
@@ -91,13 +100,14 @@ def main() -> None:
         manuel_bayat = (today - date.fromisoformat(str(manuel["guncelleme"]))).days > 7
     hizli = [a["metrics"][g["anahtar"]] for g in cfg["gostergeler"] if g.get("hizli")]
     html = render({"cfg": cfg, "a": a, "tarih": today.isoformat(), "uretim": now.strftime("%H:%M"),
-                   "yorum": yorum, "hizli": hizli, "t": a.get("teknik") or None, "paneller": build_panels(cfg, a),
+                   "yorum": yorum, "hizli": hizli, "t": a.get("teknik") or None, "hisse_url": _hisse_url(cfg), "paneller": build_panels(cfg, a),
                    "manuel": manuel, "manuel_bayat": manuel_bayat, "onceki_tarih": prev_date}, TPL)
 
     (DOCS / "arsiv").mkdir(parents=True, exist_ok=True)
     (DOCS / "index.html").write_text(html.replace('href="arsiv/index.html"', 'href="arsiv/index.html"'), encoding="utf-8")
     (DOCS / "arsiv" / f"{today.isoformat()}.html").write_text(
-        html.replace('href="arsiv/index.html"', 'href="index.html"'), encoding="utf-8")
+        html.replace('href="arsiv/index.html"', 'href="index.html"'),
+        encoding="utf-8")
 
     history[today.isoformat()] = a["kayit"]
     DATA.mkdir(exist_ok=True)
