@@ -6,120 +6,7 @@
 <title>Makro Pano · {{ tarih }}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#f6f7f9;--panel:#ffffff;--panel2:#f1f3f6;--line:#e3e6eb;--ink:#141821;--muted:#5d6675;--faint:#8b93a1;
-  --pos:#0f8a5f;--neg:#c9372c;--warn:#b7791f;--acc:#3b5bdb;--pos-bg:#e6f5ee;--neg-bg:#fbeae8;--warn-bg:#fdf3e1;--acc-bg:#e8ecfb;
-  --c1:#3b82f6;--c2:#9b59d0;--c3:#d4892a;--c4:#d64545;--bar:#c9ced8;
-}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#0c0f14;--panel:#141922;--panel2:#1a202b;--line:#252c38;--ink:#e8ebf0;--muted:#9aa3b2;--faint:#6b7483;
-  --pos:#34c38f;--neg:#f0645a;--warn:#f0b44c;--acc:#7c93ff;--pos-bg:#12281f;--neg-bg:#2c1716;--warn-bg:#2b2112;--acc-bg:#1a2140;--c1:#5b9bff;--c2:#b58cf0;--c3:#f0a94c;--c4:#f0645a;--bar:#3a4252;}}
-:root[data-theme="dark"]{
-  --bg:#0c0f14;--panel:#141922;--panel2:#1a202b;--line:#252c38;--ink:#e8ebf0;--muted:#9aa3b2;--faint:#6b7483;
-  --pos:#34c38f;--neg:#f0645a;--warn:#f0b44c;--acc:#7c93ff;--pos-bg:#12281f;--neg-bg:#2c1716;--warn-bg:#2b2112;--acc-bg:#1a2140;--c1:#5b9bff;--c2:#b58cf0;--c3:#f0a94c;--c4:#f0645a;--bar:#3a4252;}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1180px;margin:0 auto;padding:28px 16px 64px}
-.mono{font-family:"JetBrains Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
-h1{font-size:26px;letter-spacing:-.02em;margin:0}
-h2{font-size:19px;letter-spacing:-.01em;margin:0 0 4px}
-.sec{margin-top:40px}
-.sec-no{font:600 11px/1 "JetBrains Mono",monospace;color:var(--faint);letter-spacing:.12em;margin-bottom:6px}
-.sub{color:var(--muted);font-size:13px;margin:0 0 16px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px}
-.grid{display:grid;gap:12px}.grid>*{min-width:0}
-.pos{color:var(--pos)}.neg{color:var(--neg)}.neu{color:var(--muted)}
-.badge{display:inline-block;font:600 10px/1 "JetBrains Mono",monospace;letter-spacing:.08em;padding:4px 7px;border-radius:5px;text-transform:uppercase}
-.b-risk{background:var(--neg-bg);color:var(--neg)}.b-warn{background:var(--warn-bg);color:var(--warn)}
-.b-ok{background:var(--pos-bg);color:var(--pos)}.b-acc{background:var(--acc-bg);color:var(--acc)}
-.b-muted{background:var(--panel2);color:var(--muted)}
-/* header */
-.top{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:flex-end;border-bottom:1px solid var(--line);padding-bottom:18px}
-.top .meta{color:var(--muted);font-size:13px;text-align:right}
-.theme-btn{background:var(--panel);border:1px solid var(--line);color:var(--muted);border-radius:8px;padding:5px 10px;font:inherit;font-size:12px;cursor:pointer;margin-top:6px}
-/* hero */
-.hero{display:grid;grid-template-columns:260px 1fr;gap:12px;margin-top:22px}
-.gauge{display:flex;flex-direction:column;justify-content:center}
-.gauge .n{font:600 46px/1 "JetBrains Mono",monospace;letter-spacing:-.03em}
-.gauge .n small{font-size:18px;color:var(--faint)}
-.meter{height:8px;border-radius:99px;background:linear-gradient(90deg,var(--neg),var(--warn),var(--pos));position:relative;margin:14px 0 6px;opacity:.9}
-.meter i{position:absolute;top:-4px;width:4px;height:16px;border-radius:2px;background:var(--ink);transform:translateX(-2px)}
-.meter-l{display:flex;justify-content:space-between;font-size:11px;color:var(--faint)}
-.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:14px}
-.pillar{background:var(--panel2);border-radius:10px;padding:10px 12px}
-.pillar .t{font-size:12px;color:var(--muted)}
-.pillar .v{font:600 18px/1.3 "JetBrains Mono",monospace}
-.bar{height:5px;background:var(--line);border-radius:99px;overflow:hidden;margin-top:6px}
-.bar b{display:block;height:100%;border-radius:99px}
-.summary{font-size:15px;line-height:1.6}
-/* tiles */
-.tiles{grid-template-columns:repeat(auto-fill,minmax(172px,1fr))}
-.tile{padding:13px 14px 10px}
-.tile .k{font:600 10.5px/1.2 "JetBrains Mono",monospace;letter-spacing:.08em;color:var(--muted);text-transform:uppercase;display:flex;justify-content:space-between;gap:6px}
-.tile .v{font:600 20px/1.35 "JetBrains Mono",monospace;margin-top:6px}
-.tile .c{font:500 12.5px/1 "JetBrains Mono",monospace}
-.spark{width:100%;height:28px;display:block;margin-top:8px}
-.tile .spark{color:var(--faint)}
-/* alerts */
-.two{grid-template-columns:1fr 1fr}
-.alert{border-left:3px solid var(--line);padding:12px 14px}
-.alert.risk{border-left-color:var(--neg)}.alert.hareket{border-left-color:var(--warn)}.alert.destek{border-left-color:var(--pos)}
-.alert h3{font-size:14px;margin:6px 0 4px}
-.alert p{margin:0;color:var(--muted);font-size:13.5px}
-ul.story{margin:0;padding-left:18px}ul.story li{margin:6px 0}
-.src{font-size:11.5px;color:var(--faint);margin-top:10px}
-/* scenarios */
-.sc{grid-template-columns:repeat(3,1fr)}
-.scn{border-top:3px solid var(--line)}
-.scn.up{border-top-color:var(--pos)}.scn.base{border-top-color:var(--warn)}.scn.down{border-top-color:var(--neg)}
-.scn.active{box-shadow:0 0 0 2px var(--acc) inset}
-.scn h3{font-size:15px;margin:8px 0}
-.scn p{font-size:13.5px;color:var(--muted);margin:10px 0 0}
-.cond{font-size:12.5px;display:flex;justify-content:space-between;gap:8px;padding:6px 0;border-bottom:1px dashed var(--line)}
-.cond .mono{white-space:nowrap}
-/* tables */
-.tbl{width:100%;border-collapse:collapse;font-size:13.5px}
-.tbl th{font:600 10.5px/1 "JetBrains Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);text-align:right;padding:8px 10px;border-bottom:1px solid var(--line)}
-.tbl th:first-child,.tbl td:first-child{text-align:left}
-.tbl td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:right;vertical-align:middle}
-.tbl td.l{text-align:left}
-.tbl .spark{width:90px;height:22px;margin:0 0 0 auto;color:var(--faint)}
-.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
-.range{position:relative;width:90px;height:6px;border-radius:99px;background:var(--panel2);margin-left:auto}
-.range i{position:absolute;top:-3px;width:3px;height:12px;border-radius:2px;background:var(--acc)}
-.flags{display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end}
-/* tabs */
-.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
-.tabs button{background:var(--panel);border:1px solid var(--line);color:var(--muted);border-radius:8px;padding:7px 12px;font:500 13px Inter,sans-serif;cursor:pointer}
-.tabs button[aria-selected="true"]{background:var(--acc-bg);color:var(--acc);border-color:var(--acc)}
-.tabpanel[hidden]{display:none}
-.note{background:var(--acc-bg);border-radius:10px;padding:12px 14px;font-size:13.5px;margin-top:12px}
-.foot{margin-top:48px;color:var(--faint);font-size:12px;border-top:1px solid var(--line);padding-top:16px;line-height:1.7}
-.foot a{color:var(--muted)}
-.gauges{display:grid;gap:12px}
-.chips{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:8px}
-.chip{background:var(--panel2);border-radius:10px;padding:10px 12px;border-left:3px solid var(--line)}
-.chip b{font-family:"JetBrains Mono",monospace}.chip small{display:block;color:var(--muted);font-size:12px;line-height:1.4;margin-top:3px}
-.chip.g{border-left-color:var(--pos)}.chip.y{border-left-color:var(--warn)}.chip.r{border-left-color:var(--neg)}
-.charts{grid-template-columns:1fr 1fr}
-.chart{width:100%;height:auto;display:block}.chart .ax{font:10px "JetBrains Mono",monospace;fill:var(--faint)}
-.legend{display:flex;flex-wrap:wrap;gap:10px;font-size:11.5px;color:var(--muted);margin:6px 0 4px}
-.legend i{display:inline-block;width:10px;height:3px;border-radius:2px;margin-right:4px;vertical-align:middle}
-.okuma{font-size:13px;color:var(--muted);margin:8px 0 0}
-.rrgwrap{grid-template-columns:minmax(0,420px) 1fr;align-items:start}
-.rrg{width:100%;height:auto;border-radius:10px}.rrg .q{font:600 10px "JetBrains Mono",monospace;fill:var(--faint);letter-spacing:.08em}
-.rrg .lbl{font:600 10.5px "JetBrains Mono",monospace;fill:var(--ink)}
-.vols{grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}
-.bars{width:100%;height:56px;display:block;margin-top:8px}
-.wl{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
-.wl:last-child{border-bottom:0}.wl .badge{flex:none;margin-top:2px}
-.kv{display:flex;justify-content:space-between;gap:8px;padding:7px 0;border-bottom:1px dashed var(--line);font-size:13.5px}
-.kv:last-child{border-bottom:0}
-@media (max-width:860px){.hero{grid-template-columns:1fr}.sc,.two,.charts,.rrgwrap{grid-template-columns:1fr}}
-@media (max-width:420px){.tiles{grid-template-columns:1fr 1fr}.tile .v{font-size:17px}h1{font-size:22px}}
-@media print{.tabs,.theme-btn{display:none}.tabpanel[hidden]{display:block}}
-</style>
+{% include "_stil.html.j2" %}
 </head>
 <body>
 <div class="wrap">
@@ -133,7 +20,7 @@ ul.story{margin:0;padding-left:18px}ul.story li{margin:6px 0}
   <div class="meta">
     <div style="font-weight:600;color:var(--ink)">{{ tarih|trdate }}</div>
     <div>Üretim {{ uretim }} TSİ · {{ yorum.kaynak }}</div>
-    <div><a href="arsiv/index.html" style="color:var(--acc)">Arşiv →</a></div>
+    <div><a href="arsiv/index.html" style="color:var(--acc)">Arşiv →</a>{% if hisse_url %} · <a href="{{ hisse_url }}" style="color:var(--acc)">Hisse raporu →</a>{% endif %}</div>
     <button class="theme-btn" id="themeBtn" type="button">Tema</button>
   </div>
 </header>
@@ -391,7 +278,7 @@ ul.story{margin:0;padding-left:18px}ul.story li{margin:6px 0}
       <tbody>
       {% for h in a.portfolio.hisseler %}{% if h.ok %}
       <tr>
-        <td class="l"><b>{{ h.sembol }}</b><div style="font-size:12px;color:var(--muted)">{{ h.tema }}</div></td>
+        <td class="l">{% if hisse_url %}<a href="{{ hisse_url }}{{ h.sembol }}.html" style="color:var(--acc);text-decoration:none"><b>{{ h.sembol }} →</b></a>{% else %}<b>{{ h.sembol }}</b>{% endif %}<div style="font-size:12px;color:var(--muted)">{{ h.tema }}</div></td>
         <td class="mono">{{ h.fiyat|num(2) }}</td>
         <td class="mono {{ h.gun|pct_tone }}">{{ h.gun|spct(2) }}</td>
         <td class="mono {{ h.ay|pct_tone }}">{{ h.ay|spct }}</td>
