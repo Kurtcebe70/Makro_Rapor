@@ -1,12 +1,16 @@
-"""Veri çekme katmanı: FRED (anahtarsız CSV) + Yahoo Finance.
+"""Veri çekme katmanı: FRED + Yahoo Finance.
 
+FRED: FRED_API_KEY ortam değişkeni varsa resmi API (daha güvenilir), yoksa anahtarsız CSV.
+Tüm istekler kısa zaman aşımıyla ve paralel yapılır; tek bir kaynak takılırsa rapor beklemez.
 Tüm seriler {"kaynak:kod": pandas.Series} biçiminde döner.
 """
 from __future__ import annotations
 
 import io
 import json
+import os
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import date, timedelta
 from pathlib import Path
 
@@ -15,17 +19,24 @@ import requests
 
 UA = {"User-Agent": "Mozilla/5.0 (makro-rapor; kisisel kullanim)"}
 FRED_CSV = "https://fred.stlouisfed.org/graph/fredgraph.csv?id={id}&cosd={start}"
+FRED_API = ("https://api.stlouisfed.org/fred/series/observations?series_id={id}&api_key={key}"
+            "&file_type=json&observation_start={start}")
 YAHOO_CHART = "https://query1.finance.yahoo.com/v8/finance/chart/{sym}?range={rng}&interval=1d"
+TIMEOUT = (10, 25)  # (bağlantı, okuma) saniye
 
 
-def _get(url: str, tries: int = 3) -> requests.Response:
+def log(msg: str) -> None:
+    print(msg, flush=True)
+
+
+def _get(url: str, tries: int = 2) -> requests.Response:
     last = None
     for i in range(tries):
         try:
-            r = requests.get(url, headers=UA, timeout=30)
+            r = requests.get(url, headers=UA, timeout=TIMEOUT)
             if r.status_code == 200:
                 return r
-            last = RuntimeError(f"HTTP {r.status_code} {url}")
+            last = RuntimeError(f"HTTP {r.status_code}")
         except requests.RequestException as e:  # ağ hatası
             last = e
         time.sleep(2 * (i + 1))
@@ -33,6 +44,14 @@ def _get(url: str, tries: int = 3) -> requests.Response:
 
 
 def fred(series_id: str, start: str) -> pd.Series:
+    key = os.environ.get("FRED_API_KEY", "").strip()
+    if key:
+        r = _get(FRED_API.format(id=series_id, key=key, start=start))
+        obs = r.json().get("observations", [])
+        s = pd.Series({o["date"]: o["value"] for o in obs})
+        s = pd.to_numeric(s, errors="coerce").dropna()
+        s.index = pd.to_datetime(s.index)
+        return s.astype(float)
     r = _get(FRED_CSV.format(id=series_id, start=start))
     df = pd.read_csv(io.StringIO(r.text))
     df.columns = ["date", "value"]
@@ -61,7 +80,7 @@ def yahoo_many(symbols: list[str], rng: str = "2y") -> dict[str, pd.Series]:
         import yfinance as yf  # type: ignore
 
         data = yf.download(symbols, period=rng, interval="1d", auto_adjust=False,
-                           progress=False, group_by="ticker", threads=True)
+                           progress=False, group_by="ticker", threads=True, timeout=20)
         for sym in symbols:
             try:
                 df = data[sym] if len(symbols) > 1 else data
@@ -75,17 +94,23 @@ def yahoo_many(symbols: list[str], rng: str = "2y") -> dict[str, pd.Series]:
                         out[f"{key}:{sym}"] = s.astype(float)
             except Exception:
                 pass
-    except Exception:
-        pass
-    for sym in symbols:
-        if f"yahoo:{sym}" not in out:
-            try:
-                c, v = _yahoo_raw(sym, rng)
-                out[f"yahoo:{sym}"] = c
-                if len(v):
-                    out[f"yahoo_vol:{sym}"] = v
-            except Exception as e:
-                print(f"  ! Yahoo {sym} alınamadı: {e}")
+    except Exception as e:
+        log(f"  ! yfinance toplu indirme başarısız: {type(e).__name__}: {e}")
+    eksik = [s for s in symbols if f"yahoo:{s}" not in out]
+    log(f"  Yahoo: {len(symbols) - len(eksik)}/{len(symbols)} sembol yfinance ile alındı")
+    if eksik:
+        log(f"  Yahoo: {len(eksik)} sembol doğrudan deneniyor…")
+        with ThreadPoolExecutor(max_workers=8) as ex:
+            futs = {ex.submit(_yahoo_raw, sym, rng): sym for sym in eksik}
+            for f in as_completed(futs):
+                sym = futs[f]
+                try:
+                    c, v = f.result()
+                    out[f"yahoo:{sym}"] = c
+                    if len(v):
+                        out[f"yahoo_vol:{sym}"] = v
+                except Exception as e:
+                    log(f"  ! Yahoo {sym} alınamadı: {type(e).__name__}")
     return out
 
 
@@ -119,12 +144,22 @@ def fetch_all(cfg: dict) -> dict[str, pd.Series]:
     start = (date.today() - timedelta(days=800)).isoformat()
     fred_ids, yahoo_syms = needed_sources(cfg)
     raw: dict[str, pd.Series] = {}
-    for sid in sorted(fred_ids):
-        try:
-            raw[f"fred:{sid}"] = fred(sid, start)
-        except Exception as e:
-            print(f"  ! FRED {sid} alınamadı: {e}")
+    t0 = time.time()
+    log(f"  FRED: {len(fred_ids)} seri ({'API anahtarıyla' if os.environ.get('FRED_API_KEY') else 'anahtarsız CSV'})…")
+    ok = 0
+    with ThreadPoolExecutor(max_workers=6) as ex:
+        futs = {ex.submit(fred, sid, start): sid for sid in sorted(fred_ids)}
+        for f in as_completed(futs):
+            sid = futs[f]
+            try:
+                raw[f"fred:{sid}"] = f.result()
+                ok += 1
+            except Exception as e:
+                log(f"  ! FRED {sid} alınamadı: {type(e).__name__}")
+    log(f"  FRED: {ok}/{len(fred_ids)} seri alındı ({time.time() - t0:.0f} sn)")
+    t0 = time.time()
     raw.update(yahoo_many(sorted(yahoo_syms)))
+    log(f"  Yahoo tamam ({time.time() - t0:.0f} sn)")
     return raw
 
 
