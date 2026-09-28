@@ -114,7 +114,7 @@ senaryolar:
       - {metrik: dxy,   op: "<", deger: 99}
     metin: >
       Tahvil faizi düşer, hisse değerlemeleri üzerindeki yük azalır. Teknoloji ve
-      büyüme hisseleri genelde ilk tepki verir. AI altyapı temaları (NVDA, VRT, MU)
+      büyüme hisseleri genelde ilk tepki verir. AI ve uzay temaları (NVDA, VRT, SPCX, RKLB)
       faize en duyarlı grup.
   - ad: "Baz · Faiz yüksek platoda, piyasa yatay"
     ton: base
@@ -134,20 +134,24 @@ senaryolar:
       Kredi farkının açılması ikinci onay sinyalidir.
 
 # ------------------------------------------------------------
-# PORTFÖY — MODEL V7.0 adayları
+# PORTFÖY — MODEL V7.0
 #   geri_cekilme_bolgesi: 52 haftalık zirveden bu kadar % düşüşte "ek alım bölgesi" işareti
 #   (Bu senin kuralın; rapor sadece işaretler, tavsiye vermez.)
 # ------------------------------------------------------------
 portfoy:
   benchmark: SPY
+  # İsteğe bağlı: ayrı Hisse Raporu sitenin adresi (örn. https://kullanici.github.io/hisse-rapor/).
+  # Doluysa portföy tablosundaki hisse adlarına tıklayınca o hissenin sayfası açılır.
   hisse_raporu_url: "https://kurtcebe70.github.io/Hisse_Raporu/"
   geri_cekilme_bolgesi: 20
   hisseler:
-    - {sembol: NVDA, tema: "AI hesaplama"}
+    - {sembol: SPCX, tema: "Uzay (SpaceX)"}
     - {sembol: VRT,  tema: "Veri merkezi güç/soğutma"}
-    - {sembol: ETN,  tema: "Elektrifikasyon"}
-    - {sembol: GEV,  tema: "Enerji üretimi / şebeke"}
-    - {sembol: MU,   tema: "Bellek (HBM)"}
+    - {sembol: NVDA, tema: "AI hesaplama"}
+    - {sembol: QCOM, tema: "Mobil / uç cihaz AI çipleri"}
+    - {sembol: ANTW, tema: "Anthropic AI ekosistemi (ETF)"}
+    - {sembol: RKLB, tema: "Uzay fırlatma ve uydu"}
+    - {sembol: ISRG, tema: "Robotik cerrahi"}
   # Makro rejime göre DCA notu (kendi kuralını yaz)
   dca_kurallari:
     risk_on:  "Rejim destekleyici: planlı DCA takvimi aynen sürer."
