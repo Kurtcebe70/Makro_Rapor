@@ -1,0 +1,31 @@
+# ============================================================
+#  ELLE GİRİLEN VERİLER (isteğe bağlı)
+#  GitHub web arayüzünden bu dosyayı düzenleyip kaydetmen yeterli.
+#  'guncelleme' tarihi 7 günden eskiyse raporda "bayat" etiketi çıkar.
+# ============================================================
+guncelleme: 2026-09-28
+
+# CME FedWatch: https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html
+# Olasılıklar yüzde (%). Aşağıdakiler örnek başlangıç değerleridir, güncellemeyi unutma.
+fedwatch:
+  - {toplanti: "2026-10-28", indirim: 0.0, sabit: 34.1, artirim: 65.9}
+  - {toplanti: "2026-12-09", indirim: 0.0, sabit: 6.4,  artirim: 93.6}
+  - {toplanti: "2027-01-27", indirim: 0.0, sabit: 3.0,  artirim: 96.9}
+
+# Haftanın takvimi / kendi notların (raporda ve Claude yorumunda kullanılır)
+notlar:
+  - "Salı: JOLTS açık iş sayısı · Çarşamba: ADP istihdam · PCE fiyat endeksi bu hafta."
+
+# Bilanço sezonu — FactSet "Earnings Insight" (ücretsiz, her Cuma):
+# https://advantage.factset.com/earningsinsight  → rakamları buraya gir.
+# Boş bırakılırsa sağlık skorunda "Bilanço" ayağı hesaba katılmaz.
+bilanco:
+  kaynak_tarihi: 2026-09-25
+  hbk_tutturma: 86.9        # EPS beklentisini aşan şirket oranı (%)
+  hbk_5y_ort: 78
+  ciro_tutturma: 77.4       # Ciro beklentisini aşan şirket oranı (%)
+  ciro_5y_ort:              # FactSet raporundan gir
+  ceyrek_buyume: 29.1       # Cari çeyrek yıllık kâr büyüme beklentisi (%)
+  ceyrek_buyume_onceki: 26.7
+  fwd_fk: 19.2              # İleriye dönük 12 aylık F/K
+  fwd_fk_5y: 19.8

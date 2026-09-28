@@ -1,0 +1,178 @@
+# ============================================================
+#  MAKRO RAPOR — AYAR DOSYASI
+#  Eşikleri, göstergeleri ve portföyü buradan değiştirirsin.
+#  Kod değiştirmeye gerek yok.
+# ============================================================
+
+rapor:
+  baslik: "Makro Pano — ABD Ekonomisi"
+  alt_baslik: "Kişisel günlük makro rapor · MODEL V7.0"
+  saat_dilimi: "Europe/Istanbul"
+  # Claude ile yorum yazdırmak için ANTHROPIC_API_KEY gerekir.
+  # Anahtar yoksa rapor kural tabanlı şablon metinle yine üretilir.
+  claude_model: "claude-sonnet-5"
+
+# ------------------------------------------------------------
+# GÖSTERGELER
+#   kaynak : "fred:SERI" veya "yahoo:SEMBOL". Birden fazla kaynak
+#            "|" ile yazılırsa en güncel veriye sahip olan kullanılır.
+#   birim  : pct  -> yüzde seviye (değişim baz puan)
+#            idx  -> endeks/fiyat (değişim yüzde)
+#            usd  -> dolar fiyatı (değişim yüzde)
+#            num  -> düz sayı (değişim fark olarak)
+#   donusum: level (varsayılan) | yoy (yıllık % değişim) | mdiff (aylık fark)
+#   frekans: d (günlük) | w (haftalık) | m (aylık) -> bayatlık kontrolü
+#   iyi    : up/down -> hisse piyasası için olumlu yön (renk için)
+#   panel  : detay panelinin adı
+#   hizli  : true ise üstteki "Hızlı Bakış" kartlarında görünür
+# ------------------------------------------------------------
+gostergeler:
+  # --- Piyasa ---
+  - {anahtar: spx,    ad: "S&P 500",       kaynak: "yahoo:^GSPC",    birim: idx, frekans: d, iyi: up,   panel: Piyasa, hizli: true}
+  - {anahtar: ndx,    ad: "Nasdaq",        kaynak: "yahoo:^IXIC",    birim: idx, frekans: d, iyi: up,   panel: Piyasa, hizli: true}
+  - {anahtar: dji,    ad: "Dow Jones",     kaynak: "yahoo:^DJI",     birim: idx, frekans: d, iyi: up,   panel: Piyasa, hizli: true}
+  - {anahtar: rut,    ad: "Russell 2000",  kaynak: "yahoo:^RUT",     birim: idx, frekans: d, iyi: up,   panel: Piyasa}
+  - {anahtar: vix,    ad: "VIX (korku)",   kaynak: "yahoo:^VIX|fred:VIXCLS", birim: num, frekans: d, iyi: down, panel: Risk, hizli: true}
+  - {anahtar: move,   ad: "MOVE (tahvil oynaklığı)", kaynak: "yahoo:^MOVE", birim: num, frekans: d, iyi: down, panel: Risk}
+  - {anahtar: wti,    ad: "WTI Petrol",    kaynak: "yahoo:CL=F",     birim: usd, frekans: d, iyi: down, panel: Emtia, hizli: true}
+  - {anahtar: brent,  ad: "Brent",         kaynak: "yahoo:BZ=F",     birim: usd, frekans: d, iyi: down, panel: Emtia, hizli: true}
+  - {anahtar: gold,   ad: "Altın",         kaynak: "yahoo:GC=F",     birim: usd, frekans: d, iyi: none, panel: Emtia, hizli: true}
+  - {anahtar: btc,    ad: "Bitcoin",       kaynak: "yahoo:BTC-USD",  birim: usd, frekans: d, iyi: up,   panel: Emtia, hizli: true}
+
+  # --- Faiz & Dolar ---
+  - {anahtar: fedfunds, ad: "Fed Funds (üst bant)", kaynak: "fred:DFEDTARU", birim: pct, frekans: d, iyi: down, panel: "Faiz & Dolar"}
+  - {anahtar: us2y,   ad: "2Y Hazine",     kaynak: "fred:DGS2",      birim: pct, frekans: d, iyi: down, panel: "Faiz & Dolar", hizli: true}
+  - {anahtar: us10y,  ad: "10Y Hazine",    kaynak: "yahoo:^TNX|fred:DGS10", birim: pct, frekans: d, iyi: down, panel: "Faiz & Dolar", hizli: true}
+  - {anahtar: real10, ad: "10Y Reel Faiz (TIPS)", kaynak: "fred:DFII10", birim: pct, frekans: d, iyi: down, panel: "Faiz & Dolar", hizli: true}
+  - {anahtar: curve,  ad: "10Y–2Y Eğrisi", kaynak: "fred:T10Y2Y",    birim: pct, frekans: d, iyi: none, panel: "Faiz & Dolar"}
+  - {anahtar: mort30, ad: "30Y Konut Kredisi", kaynak: "fred:MORTGAGE30US", birim: pct, frekans: w, iyi: down, panel: "Faiz & Dolar"}
+  - {anahtar: dxy,    ad: "Dolar Endeksi (DXY)", kaynak: "yahoo:DX-Y.NYB", birim: idx, frekans: d, iyi: down, panel: "Faiz & Dolar", hizli: true}
+
+  # --- Likidite & Kredi ---
+  - {anahtar: walcl,  ad: "Fed Bilançosu ($ mn)", kaynak: "fred:WALCL",  birim: num, frekans: w, iyi: up,   panel: Likidite}
+  - {anahtar: tga,    ad: "Hazine Hesabı TGA ($ mn)", kaynak: "fred:WTREGEN", birim: num, frekans: w, iyi: down, panel: Likidite}
+  - {anahtar: rrp,    ad: "Ters Repo RRP ($ mr)", kaynak: "fred:RRPONTSYD", birim: num, frekans: d, iyi: down, panel: Likidite}
+  - {anahtar: hy,     ad: "Yüksek Getiri Kredi Farkı", kaynak: "fred:BAMLH0A0HYM2", birim: pct, frekans: d, iyi: down, panel: Risk}
+  - {anahtar: ig,     ad: "Yatırım Yapılabilir Kredi Farkı", kaynak: "fred:BAMLC0A0CM", birim: pct, frekans: d, iyi: down, panel: Risk}
+  - {anahtar: nfci,   ad: "Finansal Koşullar (NFCI)", kaynak: "fred:NFCI", birim: num, frekans: w, iyi: down, panel: Risk}
+  - {anahtar: stlfsi, ad: "Finansal Stres (St. Louis)", kaynak: "fred:STLFSI4", birim: num, frekans: w, iyi: down, panel: Risk}
+
+  # --- Enflasyon ---
+  - {anahtar: cpi,    ad: "TÜFE (yıllık)",      kaynak: "fred:CPIAUCSL", birim: pct, donusum: yoy, frekans: m, iyi: down, panel: Enflasyon}
+  - {anahtar: core,   ad: "Çekirdek TÜFE (yıllık)", kaynak: "fred:CPILFESL", birim: pct, donusum: yoy, frekans: m, iyi: down, panel: Enflasyon}
+  - {anahtar: pce,    ad: "Çekirdek PCE (yıllık)", kaynak: "fred:PCEPILFE", birim: pct, donusum: yoy, frekans: m, iyi: down, panel: Enflasyon}
+  - {anahtar: be10,   ad: "10Y Enflasyon Beklentisi", kaynak: "fred:T10YIE", birim: pct, frekans: d, iyi: down, panel: Enflasyon}
+
+  # --- Büyüme ---
+  - {anahtar: gdpnow, ad: "Atlanta Fed GDPNow", kaynak: "fred:GDPNOW",  birim: pct, frekans: m, iyi: up, panel: Büyüme}
+  - {anahtar: indpro, ad: "Sanayi Üretimi (yıllık)", kaynak: "fred:INDPRO", birim: pct, donusum: yoy, frekans: m, iyi: up, panel: Büyüme}
+  - {anahtar: retail, ad: "Perakende Satışlar (yıllık)", kaynak: "fred:RSAFS", birim: pct, donusum: yoy, frekans: m, iyi: up, panel: Büyüme}
+  - {anahtar: umich,  ad: "Tüketici Güveni (UMich)", kaynak: "fred:UMCSENT", birim: num, frekans: m, iyi: up, panel: Büyüme}
+
+  # --- İşgücü ---
+  - {anahtar: unrate, ad: "İşsizlik Oranı",  kaynak: "fred:UNRATE",  birim: pct, frekans: m, iyi: down, panel: İşgücü}
+  - {anahtar: nfp,    ad: "Tarım Dışı İstihdam (aylık, bin)", kaynak: "fred:PAYEMS", birim: num, donusum: mdiff, frekans: m, iyi: up, panel: İşgücü}
+  - {anahtar: claims, ad: "Haftalık İşsizlik Başvurusu", kaynak: "fred:ICSA", birim: num, frekans: w, iyi: down, panel: İşgücü}
+  - {anahtar: jolts,  ad: "JOLTS Açık İş (bin)", kaynak: "fred:JTSJOL", birim: num, frekans: m, iyi: up, panel: İşgücü}
+  - {anahtar: wages,  ad: "Saatlik Ücret (yıllık)", kaynak: "fred:CES0500000003", birim: pct, donusum: yoy, frekans: m, iyi: none, panel: İşgücü}
+
+# Piyasa genişliği için sektör ETF'leri (kaçı 200 günlük ortalamanın üstünde?)
+genislik:
+  sektor_etfleri: [XLK, XLF, XLV, XLY, XLP, XLE, XLI, XLB, XLU, XLRE, XLC]
+  esit_agirlik: RSP     # eşit ağırlıklı S&P 500
+  piyasa: SPY
+
+# ------------------------------------------------------------
+# REJİM SİNYALLERİ — her biri -1 / 0 / +1 puan üretir.
+#   yesil_alti / kirmizi_ustu : değer düşükse iyi
+#   yesil_ustu / kirmizi_alti : değer yüksekse iyi
+# Özel metrikler: spx_vs_200 (%), breadth (%), net_liq_4w (%), rsp_rel_3m (%)
+# ------------------------------------------------------------
+sinyaller:
+  - {metrik: us10y,      ayak: "Faiz Baskısı",     yesil_alti: 4.50, kirmizi_ustu: 5.00}
+  - {metrik: real10,     ayak: "Faiz Baskısı",     yesil_alti: 2.00, kirmizi_ustu: 2.50}
+  - {metrik: dxy,        ayak: "Faiz Baskısı",     yesil_alti: 100,  kirmizi_ustu: 106}
+  - {metrik: hy,         ayak: "Kredi & Likidite", yesil_alti: 3.50, kirmizi_ustu: 5.00}
+  - {metrik: nfci,       ayak: "Kredi & Likidite", yesil_alti: -0.30, kirmizi_ustu: 0.00}
+  - {metrik: net_liq_4w, ayak: "Kredi & Likidite", yesil_ustu: 0.5,  kirmizi_alti: -1.0}
+  - {metrik: vix,        ayak: "Risk İştahı",      yesil_alti: 16,   kirmizi_ustu: 25}
+  - {metrik: spx_vs_200, ayak: "Risk İştahı",      yesil_ustu: 3,    kirmizi_alti: 0}
+  - {metrik: breadth,    ayak: "Risk İştahı",      yesil_ustu: 65,   kirmizi_alti: 40}
+  - {metrik: rsp_rel_3m, ayak: "Risk İştahı",      yesil_ustu: 0,    kirmizi_alti: -4}
+  - {metrik: brent,      ayak: "Enflasyon Riski",  yesil_alti: 80,   kirmizi_ustu: 100}
+  - {metrik: core,       ayak: "Enflasyon Riski",  yesil_alti: 2.8,  kirmizi_ustu: 3.5}
+  - {metrik: be10,       ayak: "Enflasyon Riski",  yesil_alti: 2.3,  kirmizi_ustu: 2.6}
+
+# ------------------------------------------------------------
+# SENARYOLAR — "Eğer şu olursa". kosullar içinden biri (herhangi) sağlanırsa tetiklenir.
+# ------------------------------------------------------------
+senaryolar:
+  - ad: "Yukarı · Faiz geri çekilir, baskı hafifler"
+    ton: up
+    kosullar:
+      - {metrik: us10y, op: "<", deger: 5.05}
+      - {metrik: dxy,   op: "<", deger: 99}
+    metin: >
+      Tahvil faizi düşer, hisse değerlemeleri üzerindeki yük azalır. Teknoloji ve
+      büyüme hisseleri genelde ilk tepki verir. AI altyapı temaları (NVDA, VRT, MU)
+      faize en duyarlı grup.
+  - ad: "Baz · Faiz yüksek platoda, piyasa yatay"
+    ton: base
+    kosullar:
+      - {metrik: us10y, op: "between", deger: [5.05, 5.30]}
+    metin: >
+      Endeksler dar bantta gezinir, hisse seçimi öne çıkar. Kredi farkları dar kaldıkça
+      sert satış beklenmez; planlı DCA takvimine sadık kalmak için tipik ortam.
+  - ad: "Aşağı · Faiz %5,30'u aşar, satış baskısı"
+    ton: down
+    kosullar:
+      - {metrik: us10y, op: ">", deger: 5.30}
+      - {metrik: brent, op: ">", deger: 110}
+      - {metrik: hy,    op: ">", deger: 4.00}
+    metin: >
+      Tahvil hisseden para çeker, yüksek çarpanlı teknoloji en sert tepkiyi verir.
+      Kredi farkının açılması ikinci onay sinyalidir.
+
+# ------------------------------------------------------------
+# PORTFÖY — MODEL V7.0 adayları
+#   geri_cekilme_bolgesi: 52 haftalık zirveden bu kadar % düşüşte "ek alım bölgesi" işareti
+#   (Bu senin kuralın; rapor sadece işaretler, tavsiye vermez.)
+# ------------------------------------------------------------
+portfoy:
+  benchmark: SPY
+  geri_cekilme_bolgesi: 20
+  hisseler:
+    - {sembol: NVDA, tema: "AI hesaplama"}
+    - {sembol: VRT,  tema: "Veri merkezi güç/soğutma"}
+    - {sembol: ETN,  tema: "Elektrifikasyon"}
+    - {sembol: GEV,  tema: "Enerji üretimi / şebeke"}
+    - {sembol: MU,   tema: "Bellek (HBM)"}
+  # Makro rejime göre DCA notu (kendi kuralını yaz)
+  dca_kurallari:
+    risk_on:  "Rejim destekleyici: planlı DCA takvimi aynen sürer."
+    notr:     "Rejim karışık: planlı DCA sürer, ek alımlar yalnızca geri çekilme bölgesindeki adaylarda."
+    risk_off: "Rejim baskılı: planlı DCA sürer; ek alım için kredi farkı ve VIX'in sakinleşmesini bekle."
+
+# ------------------------------------------------------------
+# TEKNİK GÖRÜNÜM (MarketPulse benzeri)
+# ------------------------------------------------------------
+teknik:
+  # Trend evresi (Weinstein) ve momentum için ana endeks ETF'leri
+  trend_endeksleri: [SPY, QQQ, DIA, IWM, RSP, SMH]
+  # Hareketli ortalamalı grafik çizilecekler (son 60 seans)
+  grafikler: [SPY, QQQ, SMH, IWM]
+  # Rotasyon radarı evreni (SPY'ye göre göreli güç)
+  rotasyon_evreni: [XLK, XLF, XLV, XLY, XLP, XLE, XLI, XLB, XLU, XLRE, XLC,
+                    SMH, IGV, BOTZ, GRID, ITB, XBI, KRE, IWM, RSP]
+  saldirgan: [XLK, XLY, XLC, SMH, XLI, XLF, IGV]
+  savunmaci: [XLU, XLP, XLV, XLRE]
+  # Hacim paneli (^IXIC = Nasdaq bileşik, ^NYA = NYSE bileşik)
+  hacim_sembolleri: [^IXIC, ^NYA, SPY, QQQ, SMH, RSP, IWM]
+  # Momentum faktör stresi: MTUM 60g oynaklığı / SPY 60g oynaklığı
+  momentum_etf: MTUM
+  momentum_stres: {yuksek: 1.4, asiri: 1.8}
+  vix3m: ^VIX3M
+  # Opex (aylık vade) penceresi: vadeye kaç iş günü kala "açık" sayılsın
+  vade_penceresi_gun: 3
+  # Sağlık skoru ağırlıkları (%) — bilanço verisi yoksa ağırlığı diğerlerine dağıtılır
+  agirliklar: {Trend: 20, Momentum: 15, Genişlik: 15, Bilanço: 10, Rotasyon: 25, Duyarlılık: 15}
