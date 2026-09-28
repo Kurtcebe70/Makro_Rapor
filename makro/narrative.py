@@ -133,7 +133,7 @@ def claude_narrative(a: dict, model: str) -> dict | None:
             headers={"x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json"},
             json={"model": model, "max_tokens": 1500, "system": SYSTEM,
                   "messages": [{"role": "user", "content": USER_TMPL.format(facts=facts)}]},
-            timeout=120,
+            timeout=90,
         )
         r.raise_for_status()
         text = "".join(b.get("text", "") for b in r.json()["content"] if b.get("type") == "text")

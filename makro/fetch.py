@@ -147,8 +147,20 @@ def fetch_all(cfg: dict) -> dict[str, pd.Series]:
     t0 = time.time()
     log(f"  FRED: {len(fred_ids)} seri ({'API anahtarıyla' if os.environ.get('FRED_API_KEY') else 'anahtarsız CSV'})…")
     ok = 0
+    ids = sorted(fred_ids)
+    # Anahtarsız CSV GitHub sunucularından sık sık zaman aşımına düşer: önce tek seriyle dene,
+    # olmazsa kalanları bekletmeden atla (rapor FRED'siz üretilir).
+    if not os.environ.get("FRED_API_KEY"):
+        try:
+            raw[f"fred:{ids[0]}"] = fred(ids[0], start)
+            ok += 1
+            ids = ids[1:]
+        except Exception as e:
+            log(f"  ! FRED'e anahtarsız erişilemedi ({type(e).__name__}). FRED göstergeleri bu raporda boş kalacak.")
+            log("    Çözüm: ücretsiz FRED_API_KEY ekle (README → 'FRED API anahtarı').")
+            ids = []
     with ThreadPoolExecutor(max_workers=6) as ex:
-        futs = {ex.submit(fred, sid, start): sid for sid in sorted(fred_ids)}
+        futs = {ex.submit(fred, sid, start): sid for sid in ids}
         for f in as_completed(futs):
             sid = futs[f]
             try:

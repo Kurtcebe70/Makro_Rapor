@@ -111,7 +111,7 @@ def rrg_svg(rows: list[dict], w: int = 420, h: int = 320) -> str:
 def big_num(x: float | None) -> str:
     if x is None:
         return "—"
-    for lim, suf in ((1e9, " Mr"), (1e6, " Mn"), (1e3, " B")):
+    for lim, suf in ((1e12, " Tn"), (1e9, " Mr"), (1e6, " Mn"), (1e3, " B")):
         if abs(x) >= lim:
             return fmt_num(x / lim, 1) + suf
     return fmt_num(x, 0)
@@ -156,9 +156,10 @@ def render(ctx: dict, template_dir: Path) -> str:
     env = Environment(loader=FileSystemLoader(str(template_dir)), autoescape=select_autoescape(["html"]))
     env.filters.update(num=fmt_num, val=fmt_val, chg=fmt_change, tone=tone, pct_tone=pct_tone,
                        spct=signed_pct, trdate=tr_date, sdate=short_date)
-    env.globals.update(spark=spark_svg, line_chart=line_chart_svg, bars=bars_svg, rrg=rrg_svg)
+    env.globals.update(spark=spark_svg, line_chart=line_chart_svg, bars=bars_svg, rrg=rrg_svg,
+)
     env.filters["big"] = big_num
-    return env.get_template("rapor.html.j2").render(**ctx)
+    return env.get_template(ctx.pop("_sablon", "rapor.html.j2")).render(**ctx)
 
 
 def render_index(entries: list[dict], template_dir: Path) -> str:
