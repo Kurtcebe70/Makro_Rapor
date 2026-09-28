@@ -140,7 +140,7 @@ senaryolar:
 # ------------------------------------------------------------
 portfoy:
   benchmark: SPY
-  hisse_raporu_url: "https://kurtcebe70.github.io/Hisse_Rapor/"
+  hisse_raporu_url: "https://kurtcebe70.github.io/Hisse_Raporu/"
   geri_cekilme_bolgesi: 20
   hisseler:
     - {sembol: NVDA, tema: "AI hesaplama"}
