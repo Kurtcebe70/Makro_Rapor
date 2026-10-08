@@ -398,5 +398,55 @@
 "ITB": "geride",
 "XLU": "gucl"
 }
+},
+"2026-10-08": {
+"skor": 36,
+"etiket": "Risk Kapalı",
+"sinyal": {
+"us10y": -1,
+"dxy": 0,
+"vix": 1,
+"spx_vs_200": 1,
+"breadth": -1,
+"rsp_rel_3m": -1,
+"brent": -1
+},
+"deger": {
+"spx": 7801.77,
+"ndx": 27538.6914,
+"dji": 51179.8711,
+"rut": 2793.2041,
+"vix": 15.08,
+"move": 102.5572,
+"wti": 89.57,
+"brent": 101.98,
+"gold": 4162.2002,
+"btc": 83144.7422,
+"us10y": 5.277,
+"dxy": 102.185
+},
+"saglik": 62,
+"rotasyon": {
+"IGV": "zayif",
+"SMH": "lider",
+"XLK": "lider",
+"XLE": "zayif",
+"XLV": "geride",
+"XLC": "geride",
+"BOTZ": "geride",
+"RSP": "geride",
+"GRID": "geride",
+"XLP": "geride",
+"XLY": "gucl",
+"XLF": "geride",
+"XBI": "geride",
+"IWM": "geride",
+"XLI": "geride",
+"XLB": "geride",
+"KRE": "geride",
+"XLRE": "geride",
+"XLU": "gucl",
+"ITB": "geride"
+}
 }
 }
