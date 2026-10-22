@@ -1,6 +1,6 @@
 {
  "analiz": {
-  "tarih": "2026-10-21",
+  "tarih": "2026-10-22",
   "metrics": {
    "spx": {
     "anahtar": "spx",
@@ -13,19 +13,18 @@
     "hizli": true,
     "kaynak_kullanilan": "yahoo:^GSPC",
     "ok": true,
-    "deger": 7712.5698,
-    "onceki": 7690.73,
-    "tarih": "2026-10-20",
-    "onceki_tarih": "2026-10-19",
-    "degisim": 0.28,
+    "deger": 7757.1699,
+    "onceki": 7712.5698,
+    "tarih": "2026-10-21",
+    "onceki_tarih": "2026-10-20",
+    "degisim": 0.58,
     "degisim_birim": "%",
     "yil_min": 6343.7202,
     "yil_max": 7818.9302,
-    "yil_konum": 93,
-    "z": 0.4,
+    "yil_konum": 96,
+    "z": 0.7,
     "bayat": false,
     "spark": [
-     7431.46,
      7554.29,
      7511.3501,
      7420.1001,
@@ -114,7 +113,8 @@
      7744.0601,
      7659.4399,
      7690.73,
-     7712.5698
+     7712.5698,
+     7757.1699
     ]
    },
    "ndx": {
@@ -128,19 +128,18 @@
     "hizli": true,
     "kaynak_kullanilan": "yahoo:^IXIC",
     "ok": true,
-    "deger": 26424.8164,
-    "onceki": 26430.8906,
-    "tarih": "2026-10-20",
-    "onceki_tarih": "2026-10-19",
-    "degisim": -0.02,
+    "deger": 26702.8574,
+    "onceki": 26424.8203,
+    "tarih": "2026-10-21",
+    "onceki_tarih": "2026-10-20",
+    "degisim": 1.05,
     "degisim_birim": "%",
     "yil_min": 20794.6406,
     "yil_max": 27599.7891,
-    "yil_konum": 83,
-    "z": -0.0,
+    "yil_konum": 87,
+    "z": 0.9,
     "bayat": false,
     "spark": [
-     25888.8398,
      26683.9395,
      26376.3398,
      26021.6602,
@@ -229,7 +228,8 @@
      26713.0293,
      26140.0293,
      26430.8906,
-     26424.8164
+     26424.8203,
+     26702.8574
     ]
    },
    "dji": {
@@ -243,19 +243,18 @@
     "hizli": true,
     "kaynak_kullanilan": "yahoo:^DJI",
     "ok": true,
-    "deger": 52495.8789,
-    "onceki": 51966.0312,
-    "tarih": "2026-10-20",
-    "onceki_tarih": "2026-10-19",
-    "degisim": 1.02,
+    "deger": 52856.0898,
+    "onceki": 52495.8789,
+    "tarih": "2026-10-21",
+    "onceki_tarih": "2026-10-20",
+    "degisim": 0.69,
     "degisim_birim": "%",
     "yil_min": 45166.6406,
     "yil_max": 54349.1211,
-    "yil_konum": 80,
-    "z": 1.3,
+    "yil_konum": 84,
+    "z": 0.9,
     "bayat": false,
     "spark": [
-     51202.2617,
      51671.0312,
      51999.6719,
      51492.5508,
@@ -344,7 +343,8 @@
      52177.6914,
      52002.4102,
      51966.0312,
-     52495.8789
+     52495.8789,
+     52856.0898
     ]
    },
    "rut": {
@@ -357,19 +357,18 @@
     "panel": "Piyasa",
     "kaynak_kullanilan": "yahoo:^RUT",
     "ok": true,
-    "deger": 2773.4197,
-    "onceki": 2728.3,
-    "tarih": "2026-10-20",
-    "onceki_tarih": "2026-10-19",
-    "degisim": 1.65,
+    "deger": 2781.0208,
+    "onceki": 2773.4199,
+    "tarih": "2026-10-21",
+    "onceki_tarih": "2026-10-20",
+    "degisim": 0.27,
     "degisim_birim": "%",
     "yil_min": 2305.1101,
     "yil_max": 3068.4199,
-    "yil_konum": 61,
-    "z": 1.4,
+    "yil_konum": 62,
+    "z": 0.2,
     "bayat": false,
     "spark": [
-     2943.99,
      2965.0901,
      2939.2,
      2917.98,
@@ -458,7 +457,8 @@
      2767.27,
      2721.3701,
      2728.3,
-     2773.4197
+     2773.4199,
+     2781.0208
     ]
    },
    "vix": {
@@ -472,19 +472,18 @@
     "hizli": true,
     "kaynak_kullanilan": "yahoo:^VIX",
     "ok": true,
-    "deger": 17.31,
-    "onceki": 18.44,
-    "tarih": "2026-10-20",
-    "onceki_tarih": "2026-10-19",
-    "degisim": -1.13,
+    "deger": 16.68,
+    "onceki": 17.31,
+    "tarih": "2026-10-21",
+    "onceki_tarih": "2026-10-20",
+    "degisim": -0.63,
     "degisim_birim": "Δ",
     "yil_min": 13.47,
     "yil_max": 31.05,
-    "yil_konum": 22,
-    "z": -0.8,
+    "yil_konum": 18,
+    "z": -0.4,
     "bayat": false,
     "spark": [
-     16.2,
      16.41,
      18.44,
      16.4,
@@ -573,7 +572,8 @@
      16.46,
      19.99,
      18.44,
-     17.31
+     17.31,
+     16.68
     ]
    },
    "move": {
@@ -586,19 +586,18 @@
     "panel": "Risk",
     "kaynak_kullanilan": "yahoo:^MOVE",
     "ok": true,
-    "deger": 101.695,
-    "onceki": 101.3,
-    "tarih": "2026-10-20",
-    "onceki_tarih": "2026-10-19",
-    "degisim": 0.395,
+    "deger": 95.9387,
+    "onceki": 101.7,
+    "tarih": "2026-10-21",
+    "onceki_tarih": "2026-10-20",
+    "degisim": -5.761,
     "degisim_birim": "Δ",
     "yil_min": 55.77,
     "yil_max": 115.02,
-    "yil_konum": 78,
-    "z": 0.1,
+    "yil_konum": 68,
+    "z": -1.3,
     "bayat": false,
     "spark": [
-     69.45,
      69.36,
      69.38,
      67.28,
@@ -687,7 +686,8 @@
      102.49,
      101.1,
      101.3,
-     101.695
+     101.7,
+     95.9387
     ]
    },
    "wti": {
@@ -701,19 +701,18 @@
     "hizli": true,
     "kaynak_kullanilan": "yahoo:CL=F",
     "ok": true,
-    "deger": 99.02,
-    "onceki": 103.66,
-    "tarih": "2026-10-20",
-    "onceki_tarih": "2026-10-19",
-    "degisim": -4.48,
+    "deger": 98.26,
+    "onceki": 101.79,
+    "tarih": "2026-10-21",
+    "onceki_tarih": "2026-10-20",
+    "degisim": -3.47,
     "degisim_birim": "%",
     "yil_min": 55.27,
     "yil_max": 112.95,
-    "yil_konum": 76,
-    "z": -1.3,
+    "yil_konum": 75,
+    "z": -1.0,
     "bayat": false,
     "spark": [
-     84.88,
      80.75,
      76.05,
      76.79,
@@ -802,7 +801,8 @@
      97.97,
      101.41,
      103.66,
-     99.02
+     101.79,
+     98.26
     ]
    },
    "brent": {
@@ -816,19 +816,18 @@
     "hizli": true,
     "kaynak_kullanilan": "yahoo:BZ=F",
     "ok": true,
-    "deger": 110.23,
-    "onceki": 109.55,
-    "tarih": "2026-10-20",
-    "onceki_tarih": "2026-10-19",
-    "degisim": 0.62,
+    "deger": 110.35,
+    "onceki": 108.79,
+    "tarih": "2026-10-21",
+    "onceki_tarih": "2026-10-20",
+    "degisim": 1.43,
     "degisim_birim": "%",
     "yil_min": 58.92,
     "yil_max": 118.35,
-    "yil_konum": 86,
-    "z": 0.2,
+    "yil_konum": 87,
+    "z": 0.4,
     "bayat": false,
     "spark": [
-     87.33,
      83.17,
      78.96,
      79.55,
@@ -917,7 +916,8 @@
      105.92,
      109.86,
      109.55,
-     110.23
+     108.79,
+     110.35
     ]
    },
    "gold": {
@@ -931,19 +931,18 @@
     "hizli": true,
     "kaynak_kullanilan": "yahoo:GC=F",
     "ok": true,
-    "deger": 4136.0,
-    "onceki": 4160.1001,
-    "tarih": "2026-10-20",
-    "onceki_tarih": "2026-10-19",
-    "degisim": -0.58,
+    "deger": 4128.7002,
+    "onceki": 4142.6001,
+    "tarih": "2026-10-21",
+    "onceki_tarih": "2026-10-20",
+    "degisim": -0.34,
     "degisim_birim": "%",
     "yil_min": 3960.5,
     "yil_max": 5318.3999,
-    "yil_konum": 13,
-    "z": -0.3,
+    "yil_konum": 12,
+    "z": -0.2,
     "bayat": false,
     "spark": [
-     4238.7998,
      4351.6001,
      4354.3999,
      4381.3999,
@@ -1032,7 +1031,8 @@
      4170.1001,
      4181.1001,
      4160.1001,
-     4136.0
+     4142.6001,
+     4128.7002
     ]
    },
    "btc": {
@@ -1046,19 +1046,18 @@
     "hizli": true,
     "kaynak_kullanilan": "yahoo:BTC-USD",
     "ok": true,
-    "deger": 82699.7266,
-    "onceki": 81853.5391,
-    "tarih": "2026-10-21",
-    "onceki_tarih": "2026-10-19",
-    "degisim": 1.03,
+    "deger": 82901.2812,
+    "onceki": 82941.0,
+    "tarih": "2026-10-22",
+    "onceki_tarih": "2026-10-20",
+    "degisim": -0.05,
     "degisim_birim": "%",
     "yil_min": 58558.8594,
     "yil_max": 114472.4453,
-    "yil_konum": 43,
-    "z": 0.4,
+    "yil_konum": 44,
+    "z": -0.0,
     "bayat": false,
     "spark": [
-     65044.8125,
      64098.4961,
      64311.8125,
      65340.3008,
@@ -1147,7 +1146,8 @@
      81382.1484,
      82017.6016,
      81853.5391,
-     82699.7266
+     82941.0,
+     82901.2812
     ]
    },
    "fedfunds": {
@@ -1184,19 +1184,18 @@
     "hizli": true,
     "kaynak_kullanilan": "yahoo:^TNX",
     "ok": true,
-    "deger": 5.117,
-    "onceki": 5.136,
-    "tarih": "2026-10-20",
-    "onceki_tarih": "2026-10-19",
-    "degisim": -1.9,
+    "deger": 5.146,
+    "onceki": 5.117,
+    "tarih": "2026-10-21",
+    "onceki_tarih": "2026-10-20",
+    "degisim": 2.9,
     "degisim_birim": "bp",
     "yil_min": 3.953,
     "yil_max": 5.311,
-    "yil_konum": 86,
-    "z": -0.5,
+    "yil_konum": 88,
+    "z": 0.7,
     "bayat": false,
     "spark": [
-     4.487,
      4.469,
      4.428,
      4.463,
@@ -1285,7 +1284,8 @@
      5.089,
      5.098,
      5.136,
-     5.117
+     5.117,
+     5.146
     ]
    },
    "real10": {
@@ -1333,19 +1333,18 @@
     "hizli": true,
     "kaynak_kullanilan": "yahoo:DX-Y.NYB",
     "ok": true,
-    "deger": 101.775,
-    "onceki": 101.98,
-    "tarih": "2026-10-20",
-    "onceki_tarih": "2026-10-19",
-    "degisim": -0.2,
+    "deger": 101.642,
+    "onceki": 101.73,
+    "tarih": "2026-10-21",
+    "onceki_tarih": "2026-10-20",
+    "degisim": -0.09,
     "degisim_birim": "%",
     "yil_min": 96.22,
     "yil_max": 102.58,
-    "yil_konum": 87,
-    "z": -0.6,
+    "yil_konum": 85,
+    "z": -0.3,
     "bayat": false,
     "spark": [
-     99.75,
      99.63,
      99.54,
      100.09,
@@ -1434,7 +1433,8 @@
      102.0,
      101.84,
      101.98,
-     101.775
+     101.73,
+     101.642
     ]
    },
    "walcl": {
@@ -1668,7 +1668,7 @@
   "derived": {
    "spx_vs_200": {
     "ad": "S&P 500 / 200G ortalama",
-    "deger": 5.94,
+    "deger": 6.49,
     "birim": "%"
    },
    "breadth": {
@@ -1680,85 +1680,85 @@
      {
       "sembol": "XLE",
       "ustunde": true,
-      "uzaklik": 17.51,
-      "ay": 8.82,
-      "ust50": true
-     },
-     {
-      "sembol": "XLP",
-      "ustunde": true,
-      "uzaklik": 4.34,
-      "ay": 7.12,
+      "uzaklik": 17.62,
+      "ay": 10.33,
       "ust50": true
      },
      {
       "sembol": "XLV",
       "ustunde": true,
-      "uzaklik": 14.0,
-      "ay": 6.4,
+      "uzaklik": 13.36,
+      "ay": 5.33,
       "ust50": true
      },
      {
-      "sembol": "XLB",
+      "sembol": "XLP",
       "ustunde": true,
-      "uzaklik": 0.62,
-      "ay": 3.06,
+      "uzaklik": 3.52,
+      "ay": 5.29,
       "ust50": true
      },
      {
       "sembol": "XLU",
       "ustunde": false,
-      "uzaklik": -5.46,
-      "ay": 3.0,
-      "ust50": false
+      "uzaklik": -5.18,
+      "ay": 3.63,
+      "ust50": true
      },
      {
       "sembol": "XLY",
       "ustunde": false,
-      "uzaklik": -0.31,
-      "ay": 2.91,
+      "uzaklik": -0.26,
+      "ay": 2.85,
       "ust50": true
      },
      {
       "sembol": "XLF",
       "ustunde": true,
-      "uzaklik": 3.78,
-      "ay": -0.32,
+      "uzaklik": 4.38,
+      "ay": 2.26,
       "ust50": false
+     },
+     {
+      "sembol": "XLB",
+      "ustunde": true,
+      "uzaklik": 0.75,
+      "ay": 1.56,
+      "ust50": true
      },
      {
       "sembol": "XLRE",
       "ustunde": false,
-      "uzaklik": -2.04,
-      "ay": -0.49,
+      "uzaklik": -2.8,
+      "ay": -1.04,
       "ust50": false
      },
      {
       "sembol": "XLI",
       "ustunde": false,
-      "uzaklik": -3.62,
-      "ay": -1.87,
-      "ust50": false
-     },
-     {
-      "sembol": "XLC",
-      "ustunde": false,
-      "uzaklik": -2.86,
-      "ay": -3.97,
+      "uzaklik": -2.78,
+      "ay": -1.15,
       "ust50": false
      },
      {
       "sembol": "XLK",
       "ustunde": true,
-      "uzaklik": 10.43,
-      "ay": -4.83,
+      "uzaklik": 12.13,
+      "ay": -3.94,
+      "ust50": false
+     },
+     {
+      "sembol": "XLC",
+      "ustunde": false,
+      "uzaklik": -3.9,
+      "ay": -4.02,
       "ust50": false
      }
     ]
    },
    "rsp_rel_3m": {
     "ad": "Eşit ağırlık / S&P (3 ay)",
-    "deger": -1.37,
+    "deger": -2.39,
     "birim": "%"
    }
   },
@@ -1770,12 +1770,12 @@
      "yesil_alti": 4.5,
      "kirmizi_ustu": 5.0,
      "ad": "10Y Hazine",
-     "deger": 5.117,
+     "deger": 5.146,
      "puan": -1,
      "yesil": 4.5,
      "kirmizi": 5.0,
      "dusuk_iyi": true,
-     "asim": 0.23
+     "asim": 0.29
     },
     {
      "metrik": "dxy",
@@ -1783,12 +1783,12 @@
      "yesil_alti": 100,
      "kirmizi_ustu": 106,
      "ad": "Dolar Endeksi (DXY)",
-     "deger": 101.775,
+     "deger": 101.642,
      "puan": 0,
      "yesil": 100,
      "kirmizi": 106,
      "dusuk_iyi": true,
-     "asim": -0.7
+     "asim": -0.73
     },
     {
      "metrik": "vix",
@@ -1796,12 +1796,12 @@
      "yesil_alti": 16,
      "kirmizi_ustu": 25,
      "ad": "VIX (korku)",
-     "deger": 17.31,
+     "deger": 16.68,
      "puan": 0,
      "yesil": 16,
      "kirmizi": 25,
      "dusuk_iyi": true,
-     "asim": -0.85
+     "asim": -0.92
     },
     {
      "metrik": "spx_vs_200",
@@ -1809,12 +1809,12 @@
      "yesil_ustu": 3,
      "kirmizi_alti": 0,
      "ad": "S&P 500 / 200G ortalama",
-     "deger": 5.94,
+     "deger": 6.49,
      "puan": 1,
      "yesil": 3,
      "kirmizi": 0,
      "dusuk_iyi": false,
-     "asim": -1.98
+     "asim": -2.16
     },
     {
      "metrik": "breadth",
@@ -1835,12 +1835,12 @@
      "yesil_ustu": 0,
      "kirmizi_alti": -4,
      "ad": "Eşit ağırlık / S&P (3 ay)",
-     "deger": -1.37,
+     "deger": -2.39,
      "puan": 0,
      "yesil": 0,
      "kirmizi": -4,
      "dusuk_iyi": false,
-     "asim": -0.66
+     "asim": -0.4
     },
     {
      "metrik": "brent",
@@ -1848,12 +1848,12 @@
      "yesil_alti": 80,
      "kirmizi_ustu": 100,
      "ad": "Brent",
-     "deger": 110.23,
+     "deger": 110.35,
      "puan": -1,
      "yesil": 80,
      "kirmizi": 100,
      "dusuk_iyi": true,
-     "asim": 0.51
+     "asim": 0.52
     }
    ],
    "ayaklar": [
@@ -1885,21 +1885,21 @@
     "tur": "risk",
     "seviye": "YÜKSEK",
     "baslik": "Brent kırmızı bölgede",
-    "metin": "Brent 110,23 ile kırmızı eşik 100'in üstünde. (Enflasyon Riski)",
+    "metin": "Brent 110,35 ile kırmızı eşik 100'in üstünde. (Enflasyon Riski)",
     "siralama": 2
    },
    {
     "tur": "risk",
     "seviye": "ORTA",
     "baslik": "10Y Hazine kırmızı bölgede",
-    "metin": "10Y Hazine 5,12 ile kırmızı eşik 5,00'in üstünde. (Faiz Baskısı)",
+    "metin": "10Y Hazine 5,15 ile kırmızı eşik 5,00'in üstünde. (Faiz Baskısı)",
     "siralama": 1
    },
    {
     "tur": "destek",
     "seviye": "DESTEK",
     "baslik": "S&P 500 / 200G ortalama destekleyici",
-    "metin": "S&P 500 / 200G ortalama 5,94 ile yeşil eşiğin (3) iyi tarafında.",
+    "metin": "S&P 500 / 200G ortalama 6,49 ile yeşil eşiğin (3) iyi tarafında.",
     "siralama": -1
    }
   ],
@@ -1913,18 +1913,18 @@
       "op": "<",
       "esik": 5.05,
       "ad": "10Y Hazine",
-      "mevcut": 5.117,
+      "mevcut": 5.146,
       "saglandi": false,
-      "mesafe": 0.067
+      "mesafe": 0.096
      },
      {
       "metrik": "dxy",
       "op": "<",
       "esik": 99,
       "ad": "Dolar Endeksi (DXY)",
-      "mevcut": 101.775,
+      "mevcut": 101.642,
       "saglandi": false,
-      "mesafe": 2.775
+      "mesafe": 2.642
      }
     ],
     "metin": "Tahvil faizi düşer, hisse değerlemeleri üzerindeki yük azalır. Teknoloji ve büyüme hisseleri genelde ilk tepki verir. AI ve uzay temaları (NVDA, VRT, SPCX, RKLB) faize en duyarlı grup.\n",
@@ -1942,7 +1942,7 @@
        5.3
       ],
       "ad": "10Y Hazine",
-      "mevcut": 5.117,
+      "mevcut": 5.146,
       "saglandi": true,
       "mesafe": 0
      }
@@ -1959,18 +1959,18 @@
       "op": ">",
       "esik": 5.3,
       "ad": "10Y Hazine",
-      "mevcut": 5.117,
+      "mevcut": 5.146,
       "saglandi": false,
-      "mesafe": 0.183
+      "mesafe": 0.154
      },
      {
       "metrik": "brent",
       "op": ">",
       "esik": 110,
       "ad": "Brent",
-      "mevcut": 110.23,
+      "mevcut": 110.35,
       "saglandi": true,
-      "mesafe": -0.23
+      "mesafe": -0.35
      },
      {
       "metrik": "hy",
@@ -1992,22 +1992,21 @@
      "sembol": "SPCX",
      "tema": "Uzay (SpaceX)",
      "ok": true,
-     "fiyat": 147.79,
-     "tarih": "2026-10-20",
-     "gun": -0.11,
-     "ay": -2.67,
-     "zirveden": -30.09,
+     "fiyat": 159.31,
+     "tarih": "2026-10-21",
+     "gun": 7.79,
+     "ay": 2.97,
+     "zirveden": -24.64,
      "sma200_uzaklik": null,
-     "rsi": 45.7,
-     "rel_3m": 25.3,
+     "rsi": 56.3,
+     "rel_3m": 30.0,
      "isaretler": [
       [
        "zone",
-       "Geri çekilme bölgesi (zirveden %30)"
+       "Geri çekilme bölgesi (zirveden %25)"
       ]
      ],
      "spark": [
-      160.95,
       192.5,
       211.39,
       191.82,
@@ -2096,37 +2095,33 @@
       148.62,
       146.03,
       147.96,
-      147.79
+      147.79,
+      159.31
      ]
     },
     {
      "sembol": "VRT",
      "tema": "Veri merkezi güç/soğutma",
      "ok": true,
-     "fiyat": 203.56,
-     "tarih": "2026-10-20",
-     "gun": -1.22,
-     "ay": -18.86,
-     "zirveden": -45.89,
-     "sma200_uzaklik": -24.23,
-     "rsi": 26.3,
-     "rel_3m": -35.3,
+     "fiyat": 212.15,
+     "tarih": "2026-10-21",
+     "gun": 4.22,
+     "ay": -16.3,
+     "zirveden": -43.61,
+     "sma200_uzaklik": -21.09,
+     "rsi": 34.2,
+     "rel_3m": -35.0,
      "isaretler": [
       [
        "zone",
-       "Geri çekilme bölgesi (zirveden %46)"
+       "Geri çekilme bölgesi (zirveden %44)"
       ],
       [
        "down",
        "200G altında"
-      ],
-      [
-       "zone",
-       "RSI 26 · aşırı satım"
       ]
      ],
      "spark": [
-      302.87,
       311.93,
       299.6,
       317.58,
@@ -2215,21 +2210,22 @@
       214.75,
       206.42,
       206.08,
-      203.56
+      203.56,
+      212.15
      ]
     },
     {
      "sembol": "NVDA",
      "tema": "AI hesaplama",
      "ok": true,
-     "fiyat": 216.47,
-     "tarih": "2026-10-20",
-     "gun": -0.29,
-     "ay": -4.8,
-     "zirveden": -9.52,
-     "sma200_uzaklik": 6.5,
-     "rsi": 40.9,
-     "rel_3m": -0.8,
+     "fiyat": 221.97,
+     "tarih": "2026-10-21",
+     "gun": 2.54,
+     "ay": -3.01,
+     "zirveden": -7.22,
+     "sma200_uzaklik": 9.11,
+     "rsi": 47.9,
+     "rel_3m": 1.6,
      "isaretler": [
       [
        "up",
@@ -2237,7 +2233,6 @@
       ]
      ],
      "spark": [
-      205.19,
       212.45,
       207.41,
       204.65,
@@ -2326,25 +2321,26 @@
       217.23,
       214.13,
       217.09,
-      216.47
+      216.47,
+      221.97
      ]
     },
     {
      "sembol": "QCOM",
      "tema": "Mobil / uç cihaz AI çipleri",
      "ok": true,
-     "fiyat": 175.71,
-     "tarih": "2026-10-20",
-     "gun": 1.26,
-     "ay": -9.54,
-     "zirveden": -30.0,
-     "sma200_uzaklik": 3.73,
-     "rsi": 47.1,
-     "rel_3m": -2.8,
+     "fiyat": 177.96,
+     "tarih": "2026-10-21",
+     "gun": 1.28,
+     "ay": -10.24,
+     "zirveden": -29.11,
+     "sma200_uzaklik": 5.05,
+     "rsi": 49.6,
+     "rel_3m": -0.7,
      "isaretler": [
       [
        "zone",
-       "Geri çekilme bölgesi (zirveden %30)"
+       "Geri çekilme bölgesi (zirveden %29)"
       ],
       [
        "up",
@@ -2352,7 +2348,6 @@
       ]
      ],
      "spark": [
-      211.72,
       220.81,
       214.07,
       212.97,
@@ -2441,20 +2436,21 @@
       178.4,
       172.11,
       173.53,
-      175.71
+      175.71,
+      177.96
      ]
     },
     {
      "sembol": "ANTW",
      "tema": "Anthropic AI ekosistemi (ETF)",
      "ok": true,
-     "fiyat": 22.25,
-     "tarih": "2026-10-20",
-     "gun": 0.45,
-     "ay": -14.32,
-     "zirveden": -14.78,
+     "fiyat": 22.57,
+     "tarih": "2026-10-21",
+     "gun": 1.44,
+     "ay": -13.56,
+     "zirveden": -13.56,
      "sma200_uzaklik": null,
-     "rsi": 33.4,
+     "rsi": 37.2,
      "rel_3m": null,
      "isaretler": [],
      "spark": [
@@ -2505,37 +2501,33 @@
       22.81,
       21.75,
       22.15,
-      22.25
+      22.25,
+      22.57
      ]
     },
     {
      "sembol": "RKLB",
      "tema": "Uzay fırlatma ve uydu",
      "ok": true,
-     "fiyat": 50.9,
-     "tarih": "2026-10-20",
-     "gun": -0.9,
-     "ay": -27.17,
-     "zirveden": -66.12,
-     "sma200_uzaklik": -37.19,
-     "rsi": 26.2,
-     "rel_3m": -29.9,
+     "fiyat": 53.67,
+     "tarih": "2026-10-21",
+     "gun": 5.44,
+     "ay": -25.44,
+     "zirveden": -64.27,
+     "sma200_uzaklik": -33.67,
+     "rsi": 32.8,
+     "rel_3m": -28.0,
      "isaretler": [
       [
        "zone",
-       "Geri çekilme bölgesi (zirveden %66)"
+       "Geri çekilme bölgesi (zirveden %64)"
       ],
       [
        "down",
        "200G altında"
-      ],
-      [
-       "zone",
-       "RSI 26 · aşırı satım"
       ]
      ],
      "spark": [
-      102.39,
       109.25,
       104.63,
       107.98,
@@ -2624,25 +2616,26 @@
       55.25,
       50.84,
       51.36,
-      50.9
+      50.9,
+      53.67
      ]
     },
     {
      "sembol": "ISRG",
      "tema": "Robotik cerrahi",
      "ok": true,
-     "fiyat": 438.0,
-     "tarih": "2026-10-20",
-     "gun": 1.11,
-     "ay": 9.05,
-     "zirveden": -26.12,
-     "sma200_uzaklik": -0.08,
-     "rsi": 69.7,
-     "rel_3m": 25.7,
+     "fiyat": 428.12,
+     "tarih": "2026-10-21",
+     "gun": -2.26,
+     "ay": 6.47,
+     "zirveden": -27.79,
+     "sma200_uzaklik": -2.18,
+     "rsi": 61.2,
+     "rel_3m": 24.2,
      "isaretler": [
       [
        "zone",
-       "Geri çekilme bölgesi (zirveden %26)"
+       "Geri çekilme bölgesi (zirveden %28)"
       ],
       [
        "down",
@@ -2650,7 +2643,6 @@
       ]
      ],
      "spark": [
-      411.06,
       416.55,
       417.07,
       402.18,
@@ -2739,7 +2731,8 @@
       427.86,
       426.7,
       433.18,
-      438.0
+      438.0,
+      428.12
      ]
     }
    ],
@@ -2748,11 +2741,11 @@
    "benchmark": "SPY"
   },
   "degisenler": [
-   "VIX (korku): 18,44 → 17,31.",
-   "10Y Hazine: %5,14 → %5,12.",
-   "Dolar Endeksi (DXY): 101,87 → 101,78.",
-   "Brent: 109,66 $ → 110,23 $.",
-   "S&P 500: 7.690,7 → 7.712,6."
+   "VIX (korku): 17,31 → 16,68.",
+   "10Y Hazine: %5,12 → %5,15.",
+   "Dolar Endeksi (DXY): 101,78 → 101,64.",
+   "Brent: 110,23 $ → 110,35 $.",
+   "S&P 500: 7.712,6 → 7.757,2."
   ],
   "kayit": {
    "skor": 43,
@@ -2767,41 +2760,41 @@
     "brent": -1
    },
    "deger": {
-    "spx": 7712.5698,
-    "ndx": 26424.8164,
-    "dji": 52495.8789,
-    "rut": 2773.4197,
-    "vix": 17.31,
-    "move": 101.695,
-    "wti": 99.02,
-    "brent": 110.23,
-    "gold": 4136.0,
-    "btc": 82699.7266,
-    "us10y": 5.117,
-    "dxy": 101.775
+    "spx": 7757.1699,
+    "ndx": 26702.8574,
+    "dji": 52856.0898,
+    "rut": 2781.0208,
+    "vix": 16.68,
+    "move": 95.9387,
+    "wti": 98.26,
+    "brent": 110.35,
+    "gold": 4128.7002,
+    "btc": 82901.2812,
+    "us10y": 5.146,
+    "dxy": 101.642
    },
-   "saglik": 57,
+   "saglik": 58,
    "rotasyon": {
     "XLE": "lider",
-    "XLV": "lider",
     "IGV": "zayif",
+    "XLV": "lider",
     "XLP": "lider",
-    "RSP": "lider",
     "XLK": "geride",
-    "XLB": "lider",
+    "RSP": "gucl",
     "XLY": "lider",
-    "XBI": "gucl",
     "XLF": "gucl",
-    "XLU": "gucl",
-    "XLRE": "gucl",
+    "XLB": "gucl",
+    "XBI": "gucl",
     "KRE": "gucl",
     "SMH": "geride",
-    "XLC": "gucl",
-    "IWM": "gucl",
+    "XLU": "gucl",
+    "XLC": "geride",
+    "XLRE": "gucl",
     "XLI": "gucl",
-    "ITB": "gucl",
+    "IWM": "gucl",
     "BOTZ": "geride",
-    "GRID": "geride"
+    "GRID": "geride",
+    "ITB": "gucl"
    }
   },
   "manuel": {
@@ -2843,22 +2836,22 @@
   },
   "teknik": {
    "saglik": {
-    "skor": 57,
+    "skor": 58,
     "etiket": "Kararsız",
     "ayaklar": {
      "Trend": {
-      "puan": 8.3,
-      "not": "6 endeksin 4'si Evre 2 yükselişte",
+      "puan": 9.2,
+      "not": "6 endeksin 5'si Evre 2 yükselişte",
       "agirlik": 20
      },
      "Momentum": {
-      "puan": 2.6,
+      "puan": 3.4,
       "not": "Güçlü: DIA, RSP · faktör stresi aşırı stres",
       "agirlik": 15
      },
      "Genişlik": {
-      "puan": 4.1,
-      "not": "Sektörlerin %55'ı 200G, %45'ı 50G üstünde",
+      "puan": 4.4,
+      "not": "Sektörlerin %55'ı 200G, %55'ı 50G üstünde",
       "agirlik": 15
      },
      "Bilanço": {
@@ -2867,13 +2860,13 @@
       "agirlik": 10
      },
      "Rotasyon": {
-      "puan": 4.0,
-      "not": "6 lider · 9 güçlenen · 1 zayıflayan",
+      "puan": 3.0,
+      "not": "4 lider · 10 güçlenen · 1 zayıflayan",
       "agirlik": 25
      },
      "Duyarlılık": {
       "puan": 7.0,
-      "not": "VIX 17,31 · vade yapısı contango (sakin)",
+      "not": "VIX 16,68 · vade yapısı contango (sakin)",
       "agirlik": 15
      }
     }
@@ -2881,54 +2874,15 @@
    "endeksler": [
     {
      "sembol": "SPY",
-     "fiyat": 769.05,
-     "gun": 0.34,
-     "ay": -0.58,
-     "rsi": 49.7,
+     "fiyat": 773.09,
+     "gun": 0.53,
+     "ay": -0.04,
+     "rsi": 53.5,
      "ma": {
-      "10": 772.6,
-      "21": 770.75,
-      "50": 768.29,
-      "200": 725.87
-     },
-     "ma_ust": [
-      50,
-      200
-     ],
-     "evre": 2,
-     "evre_ad": "Evre 2 · Yükseliş",
-     "zirveden": -1.29
-    },
-    {
-     "sembol": "QQQ",
-     "fiyat": 717.63,
-     "gun": -0.1,
-     "ay": -3.22,
-     "rsi": 40.8,
-     "ma": {
-      "10": 734.89,
-      "21": 740.23,
-      "50": 726.62,
-      "200": 675.95
-     },
-     "ma_ust": [
-      200
-     ],
-     "evre": 2,
-     "evre_ad": "Evre 2 · Yükseliş",
-     "zirveden": -5.53
-    },
-    {
-     "sembol": "DIA",
-     "fiyat": 524.36,
-     "gun": 1.05,
-     "ay": 0.88,
-     "rsi": 58.6,
-     "ma": {
-      "10": 517.21,
-      "21": 515.07,
-      "50": 523.49,
-      "200": 504.72
+      "10": 772.19,
+      "21": 770.73,
+      "50": 768.34,
+      "200": 726.29
      },
      "ma_ust": [
       10,
@@ -2938,38 +2892,79 @@
      ],
      "evre": 2,
      "evre_ad": "Evre 2 · Yükseliş",
-     "zirveden": -3.4
+     "zirveden": -0.77
+    },
+    {
+     "sembol": "QQQ",
+     "fiyat": 725.2,
+     "gun": 1.05,
+     "ay": -2.98,
+     "rsi": 46.0,
+     "ma": {
+      "10": 731.64,
+      "21": 739.17,
+      "50": 726.75,
+      "200": 676.49
+     },
+     "ma_ust": [
+      200
+     ],
+     "evre": 2,
+     "evre_ad": "Evre 2 · Yükseliş",
+     "zirveden": -4.54
+    },
+    {
+     "sembol": "DIA",
+     "fiyat": 527.7,
+     "gun": 0.64,
+     "ay": 1.87,
+     "rsi": 62.2,
+     "ma": {
+      "10": 518.88,
+      "21": 515.53,
+      "50": 523.3,
+      "200": 504.91
+     },
+     "ma_ust": [
+      10,
+      21,
+      50,
+      200
+     ],
+     "evre": 2,
+     "evre_ad": "Evre 2 · Yükseliş",
+     "zirveden": -2.78
     },
     {
      "sembol": "IWM",
-     "fiyat": 275.78,
-     "gun": 1.66,
-     "ay": -3.43,
-     "rsi": 42.9,
+     "fiyat": 276.48,
+     "gun": 0.25,
+     "ay": -3.74,
+     "rsi": 44.2,
      "ma": {
-      "10": 275.28,
-      "21": 278.46,
-      "50": 287.98,
-      "200": 277.91
+      "10": 275.15,
+      "21": 277.95,
+      "50": 287.49,
+      "200": 278.03
      },
      "ma_ust": [
       10
      ],
      "evre": 3,
      "evre_ad": "Evre 3 · Tepe",
-     "zirveden": -9.61
+     "zirveden": -9.38
     },
     {
      "sembol": "RSP",
-     "fiyat": 215.86,
-     "gun": 1.15,
-     "ay": 1.5,
-     "rsi": 58.3,
+     "fiyat": 216.64,
+     "gun": 0.36,
+     "ay": 1.8,
+     "rsi": 60.3,
      "ma": {
-      "10": 213.24,
-      "21": 211.78,
-      "50": 215.61,
-      "200": 206.95
+      "10": 213.85,
+      "21": 211.96,
+      "50": 215.53,
+      "200": 207.06
      },
      "ma_ust": [
       10,
@@ -2979,36 +2974,35 @@
      ],
      "evre": 2,
      "evre_ad": "Evre 2 · Yükseliş",
-     "zirveden": -3.1
+     "zirveden": -2.75
     },
     {
      "sembol": "SMH",
-     "fiyat": 546.36,
-     "gun": -0.38,
-     "ay": -8.33,
-     "rsi": 35.2,
+     "fiyat": 556.7,
+     "gun": 1.89,
+     "ay": -8.36,
+     "rsi": 40.3,
      "ma": {
-      "10": 577.29,
-      "21": 596.17,
-      "50": 577.88,
-      "200": 513.15
+      "10": 570.46,
+      "21": 593.75,
+      "50": 577.56,
+      "200": 514.05
      },
      "ma_ust": [
       200
      ],
-     "evre": 3,
-     "evre_ad": "Evre 3 · Tepe",
-     "zirveden": -18.32
+     "evre": 2,
+     "evre_ad": "Evre 2 · Yükseliş",
+     "zirveden": -16.78
     }
    ],
    "grafikler": [
     {
      "sembol": "SPY",
-     "fiyat": 769.0499877929688,
-     "gun": 0.34,
+     "fiyat": 773.0900268554688,
+     "gun": 0.53,
      "seriler": {
       "Fiyat": [
-       740.86,
        729.46,
        741.69,
        747.03,
@@ -3067,10 +3061,10 @@
        771.79,
        763.25,
        766.48,
-       769.05
+       769.05,
+       773.09
       ],
       "10G": [
-       744.37,
        741.83,
        740.93,
        741.3,
@@ -3129,10 +3123,10 @@
        775.08,
        774.44,
        773.6,
-       772.6
+       772.6,
+       772.19
       ],
       "21G": [
-       746.38,
        745.83,
        745.59,
        745.65,
@@ -3191,10 +3185,10 @@
        770.7,
        770.73,
        770.96,
-       770.75
+       770.75,
+       770.73
       ],
       "50G": [
-       744.86,
        744.66,
        744.72,
        744.99,
@@ -3253,10 +3247,10 @@
        768.61,
        768.5,
        768.37,
-       768.29
+       768.29,
+       768.34
       ],
       "200G": [
-       699.23,
        699.52,
        699.97,
        700.39,
@@ -3315,28 +3309,28 @@
        724.63,
        725.01,
        725.44,
-       725.87
+       725.87,
+       726.29
       ]
      },
      "son": {
-      "Fiyat": 769.05,
-      "10G": 772.6,
-      "21G": 770.75,
-      "50G": 768.29,
-      "200G": 725.87
+      "Fiyat": 773.09,
+      "10G": 772.19,
+      "21G": 770.73,
+      "50G": 768.34,
+      "200G": 726.29
      },
-     "okuma": "SPY 769,05 · üstünde: 50G, 200G · altında: 10G, 21G. Kısa ortalamalar uzunların üstünde sıralı — dizilim boğa tarafında.",
-     "ilk_tarih": "28.07",
-     "orta_tarih": "09.09",
-     "son_tarih": "20.10"
+     "okuma": "SPY 773,09 ile 10, 21, 50 ve 200 günlük ortalamaların hepsinin üstünde. Kısa ortalamalar uzunların üstünde sıralı — dizilim boğa tarafında.",
+     "ilk_tarih": "29.07",
+     "orta_tarih": "10.09",
+     "son_tarih": "21.10"
     },
     {
      "sembol": "QQQ",
-     "fiyat": 717.6300048828125,
-     "gun": -0.1,
+     "fiyat": 725.2000122070312,
+     "gun": 1.05,
      "seriler": {
       "Fiyat": [
-       675.49,
        661.73,
        683.55,
        687.99,
@@ -3395,10 +3389,10 @@
        728.0,
        709.8,
        718.36,
-       717.63
+       717.63,
+       725.2
       ],
       "10G": [
-       696.32,
        690.72,
        688.48,
        687.74,
@@ -3457,10 +3451,10 @@
        746.86,
        742.88,
        739.1,
-       734.89
+       734.89,
+       731.64
       ],
       "21G": [
-       708.83,
        705.86,
        703.34,
        701.57,
@@ -3519,10 +3513,10 @@
        741.85,
        741.52,
        741.37,
-       740.23
+       740.23,
+       739.17
       ],
       "50G": [
-       716.75,
        715.81,
        715.36,
        715.09,
@@ -3581,10 +3575,10 @@
        726.87,
        726.77,
        726.68,
-       726.62
+       726.62,
+       726.75
       ],
       "200G": [
-       643.88,
        644.14,
        644.61,
        645.04,
@@ -3643,28 +3637,28 @@
        674.46,
        674.91,
        675.43,
-       675.95
+       675.95,
+       676.49
       ]
      },
      "son": {
-      "Fiyat": 717.63,
-      "10G": 734.89,
-      "21G": 740.23,
-      "50G": 726.62,
-      "200G": 675.95
+      "Fiyat": 725.2,
+      "10G": 731.64,
+      "21G": 739.17,
+      "50G": 726.75,
+      "200G": 676.49
      },
-     "okuma": "QQQ 717,63 · üstünde: 200G · altında: 10G, 21G, 50G. Ortalama dizilimi karışık.",
-     "ilk_tarih": "28.07",
-     "orta_tarih": "09.09",
-     "son_tarih": "20.10"
+     "okuma": "QQQ 725,20 · üstünde: 200G · altında: 10G, 21G, 50G. Ortalama dizilimi karışık.",
+     "ilk_tarih": "29.07",
+     "orta_tarih": "10.09",
+     "son_tarih": "21.10"
     },
     {
      "sembol": "SMH",
-     "fiyat": 546.3599853515625,
-     "gun": -0.38,
+     "fiyat": 556.7000122070312,
+     "gun": 1.89,
      "seriler": {
       "Fiyat": [
-       529.6,
        504.22,
        538.9,
        540.53,
@@ -3723,10 +3717,10 @@
        558.84,
        539.79,
        548.46,
-       546.36
+       546.36,
+       556.7
       ],
       "10G": [
-       566.55,
        557.9,
        554.9,
        553.3,
@@ -3785,10 +3779,10 @@
        603.53,
        594.45,
        585.91,
-       577.29
+       577.29,
+       570.46
       ],
       "21G": [
-       588.08,
        581.99,
        576.42,
        572.62,
@@ -3847,10 +3841,10 @@
        600.7,
        599.71,
        598.54,
-       596.17
+       596.17,
+       593.75
       ],
       "50G": [
-       597.43,
        596.38,
        596.24,
        596.17,
@@ -3909,10 +3903,10 @@
        579.66,
        579.03,
        578.35,
-       577.88
+       577.88,
+       577.56
       ],
       "200G": [
-       447.66,
        448.46,
        449.52,
        450.53,
@@ -3971,28 +3965,28 @@
        510.46,
        511.35,
        512.29,
-       513.15
+       513.15,
+       514.05
       ]
      },
      "son": {
-      "Fiyat": 546.36,
-      "10G": 577.29,
-      "21G": 596.17,
-      "50G": 577.88,
-      "200G": 513.15
+      "Fiyat": 556.7,
+      "10G": 570.46,
+      "21G": 593.75,
+      "50G": 577.56,
+      "200G": 514.05
      },
-     "okuma": "SMH 546,36 · üstünde: 200G · altında: 10G, 21G, 50G. Ortalama dizilimi karışık.",
-     "ilk_tarih": "28.07",
-     "orta_tarih": "09.09",
-     "son_tarih": "20.10"
+     "okuma": "SMH 556,70 · üstünde: 200G · altında: 10G, 21G, 50G. Ortalama dizilimi karışık.",
+     "ilk_tarih": "29.07",
+     "orta_tarih": "10.09",
+     "son_tarih": "21.10"
     },
     {
      "sembol": "IWM",
-     "fiyat": 275.7799987792969,
-     "gun": 1.66,
+     "fiyat": 276.4800109863281,
+     "gun": 0.25,
      "seriler": {
       "Fiyat": [
-       293.37,
        288.57,
        292.59,
        291.2,
@@ -4051,10 +4045,10 @@
        275.08,
        270.44,
        271.28,
-       275.78
+       275.78,
+       276.48
       ],
       "10G": [
-       293.76,
        293.04,
        292.74,
        292.45,
@@ -4113,10 +4107,10 @@
        278.15,
        277.04,
        275.83,
-       275.28
+       275.28,
+       275.15
       ],
       "21G": [
-       295.41,
        294.92,
        294.54,
        294.16,
@@ -4175,10 +4169,10 @@
        280.25,
        279.54,
        278.93,
-       278.46
+       278.46,
+       277.95
       ],
       "50G": [
-       291.57,
        291.79,
        292.13,
        292.49,
@@ -4237,10 +4231,10 @@
        289.63,
        289.07,
        288.46,
-       287.98
+       287.98,
+       287.49
       ],
       "200G": [
-       265.13,
        265.35,
        265.62,
        265.86,
@@ -4299,321 +4293,322 @@
        277.54,
        277.65,
        277.78,
-       277.91
+       277.91,
+       278.03
       ]
      },
      "son": {
-      "Fiyat": 275.78,
-      "10G": 275.28,
-      "21G": 278.46,
-      "50G": 287.98,
-      "200G": 277.91
+      "Fiyat": 276.48,
+      "10G": 275.15,
+      "21G": 277.95,
+      "50G": 287.49,
+      "200G": 278.03
      },
-     "okuma": "IWM 275,78 · üstünde: 10G · altında: 21G, 50G, 200G. Ortalama dizilimi karışık.",
-     "ilk_tarih": "28.07",
-     "orta_tarih": "09.09",
-     "son_tarih": "20.10"
+     "okuma": "IWM 276,48 · üstünde: 10G · altında: 21G, 50G, 200G. Ortalama dizilimi karışık.",
+     "ilk_tarih": "29.07",
+     "orta_tarih": "10.09",
+     "son_tarih": "21.10"
     }
    ],
    "rotasyon": [
     {
      "sembol": "XLE",
-     "trend": 6.26,
-     "mom": 5.76,
+     "trend": 5.77,
+     "mom": 5.74,
      "kadran": "lider",
      "kadran_ad": "Lider",
-     "rel_1a": 9.4,
-     "rel_3a": 11.9,
-     "rel_6a": 12.4,
+     "rel_1a": 10.4,
+     "rel_3a": 10.1,
+     "rel_6a": 11.9,
      "evre": 2,
      "evre_ad": "Evre 2 · Yükseliş",
-     "sma200": 57.84364990234375,
-     "fiyat": 67.97,
+     "sma200": 57.94999992370605,
+     "fiyat": 68.16,
      "skor": 100
     },
     {
-     "sembol": "XLV",
-     "trend": 5.4,
-     "mom": 8.13,
-     "kadran": "lider",
-     "kadran_ad": "Lider",
-     "rel_1a": 7.0,
-     "rel_3a": 9.9,
-     "rel_6a": 14.0,
+     "sembol": "IGV",
+     "trend": 1.94,
+     "mom": -1.98,
+     "kadran": "zayif",
+     "kadran_ad": "Zayıflayan",
+     "rel_1a": 2.0,
+     "rel_3a": 20.2,
+     "rel_6a": 13.9,
      "evre": 2,
      "evre_ad": "Evre 2 · Yükseliş",
-     "sma200": 157.73754997253417,
-     "fiyat": 179.82,
+     "sma200": 93.77949981689453,
+     "fiyat": 108.82,
      "skor": 95
     },
     {
-     "sembol": "IGV",
-     "trend": 0.78,
-     "mom": -4.4,
-     "kadran": "zayif",
-     "kadran_ad": "Zayıflayan",
-     "rel_1a": 0.4,
-     "rel_3a": 17.2,
-     "rel_6a": 14.1,
+     "sembol": "XLV",
+     "trend": 4.21,
+     "mom": 5.63,
+     "kadran": "lider",
+     "kadran_ad": "Lider",
+     "rel_1a": 5.4,
+     "rel_3a": 6.1,
+     "rel_6a": 13.5,
      "evre": 2,
      "evre_ad": "Evre 2 · Yükseliş",
-     "sma200": 93.7535498046875,
-     "fiyat": 106.93,
+     "sma200": 157.85705001831056,
+     "fiyat": 178.94,
      "skor": 90
     },
     {
      "sembol": "XLP",
-     "trend": 4.12,
-     "mom": 8.78,
+     "trend": 2.77,
+     "mom": 7.1,
      "kadran": "lider",
      "kadran_ad": "Lider",
-     "rel_1a": 7.7,
-     "rel_3a": 1.1,
-     "rel_6a": -2.0,
+     "rel_1a": 5.3,
+     "rel_3a": -0.0,
+     "rel_6a": -2.6,
      "evre": 3,
      "evre_ad": "Evre 3 · Tepe",
-     "sma200": 84.10085018157959,
-     "fiyat": 87.75,
+     "sma200": 84.14965019226074,
+     "fiyat": 87.11,
      "skor": 85
     },
     {
-     "sembol": "RSP",
-     "trend": 0.01,
-     "mom": 3.72,
-     "kadran": "lider",
-     "kadran_ad": "Lider",
-     "rel_1a": 2.1,
-     "rel_3a": -1.4,
-     "rel_6a": -2.7,
-     "evre": 2,
-     "evre_ad": "Evre 2 · Yükseliş",
-     "sma200": 206.9491502380371,
-     "fiyat": 215.86,
-     "skor": 80
-    },
-    {
      "sembol": "XLK",
-     "trend": -2.42,
-     "mom": -8.34,
+     "trend": -1.33,
+     "mom": -6.94,
      "kadran": "geride",
      "kadran_ad": "Geride",
-     "rel_1a": -4.2,
-     "rel_3a": -0.0,
+     "rel_1a": -3.9,
+     "rel_3a": 0.9,
      "rel_6a": 10.6,
      "evre": 2,
      "evre_ad": "Evre 2 · Yükseliş",
-     "sma200": 167.92240005493164,
-     "fiyat": 185.44,
+     "sma200": 168.14200004577637,
+     "fiyat": 188.54,
+     "skor": 80
+    },
+    {
+     "sembol": "RSP",
+     "trend": -0.11,
+     "mom": 4.0,
+     "kadran": "gucl",
+     "kadran_ad": "Güçlenen",
+     "rel_1a": 1.8,
+     "rel_3a": -2.5,
+     "rel_6a": -1.7,
+     "evre": 2,
+     "evre_ad": "Evre 2 · Yükseliş",
+     "sma200": 207.05910026550293,
+     "fiyat": 216.64,
      "skor": 75
     },
     {
-     "sembol": "XLB",
-     "trend": 0.16,
-     "mom": 5.31,
+     "sembol": "XLY",
+     "trend": 1.07,
+     "mom": 5.15,
      "kadran": "lider",
      "kadran_ad": "Lider",
-     "rel_1a": 3.6,
-     "rel_3a": -2.1,
-     "rel_6a": -10.3,
+     "rel_1a": 2.9,
+     "rel_3a": 1.5,
+     "rel_6a": -11.6,
      "evre": 3,
      "evre_ad": "Evre 3 · Tepe",
-     "sma200": 50.91530002593994,
-     "fiyat": 51.23,
+     "sma200": 115.83114986419677,
+     "fiyat": 115.53,
      "skor": 70
     },
     {
-     "sembol": "XLY",
-     "trend": 1.5,
-     "mom": 5.61,
-     "kadran": "lider",
-     "kadran_ad": "Lider",
-     "rel_1a": 3.5,
-     "rel_3a": -1.6,
-     "rel_6a": -12.2,
-     "evre": 3,
-     "evre_ad": "Evre 3 · Tepe",
-     "sma200": 115.85499988555908,
-     "fiyat": 115.5,
+     "sembol": "XLF",
+     "trend": -0.82,
+     "mom": 5.65,
+     "kadran": "gucl",
+     "kadran_ad": "Güçlenen",
+     "rel_1a": 2.3,
+     "rel_3a": -4.4,
+     "rel_6a": -1.4,
+     "evre": 2,
+     "evre_ad": "Evre 2 · Yükseliş",
+     "sma200": 53.68875001907349,
+     "fiyat": 56.04,
      "skor": 65
     },
     {
-     "sembol": "XBI",
-     "trend": -2.92,
-     "mom": 3.37,
+     "sembol": "XLB",
+     "trend": -0.1,
+     "mom": 6.04,
      "kadran": "gucl",
      "kadran_ad": "Güçlenen",
-     "rel_1a": -2.6,
-     "rel_3a": -2.2,
-     "rel_6a": 3.1,
-     "evre": 2,
-     "evre_ad": "Evre 2 · Yükseliş",
-     "sma200": 140.4459999847412,
-     "fiyat": 153.24,
+     "rel_1a": 1.6,
+     "rel_3a": -2.7,
+     "rel_6a": -9.7,
+     "evre": 3,
+     "evre_ad": "Evre 3 · Tepe",
+     "sma200": 50.93900001525879,
+     "fiyat": 51.32,
      "skor": 60
     },
     {
-     "sembol": "XLF",
-     "trend": -0.93,
-     "mom": 5.53,
+     "sembol": "XBI",
+     "trend": -3.65,
+     "mom": 2.76,
      "kadran": "gucl",
      "kadran_ad": "Güçlenen",
-     "rel_1a": 0.3,
-     "rel_3a": -3.5,
-     "rel_6a": -2.7,
+     "rel_1a": -5.6,
+     "rel_3a": -4.4,
+     "rel_6a": 2.6,
      "evre": 2,
      "evre_ad": "Evre 2 · Yükseliş",
-     "sma200": 53.68920001983643,
-     "fiyat": 55.72,
+     "sma200": 140.6091499710083,
+     "fiyat": 152.78,
      "skor": 55
     },
     {
-     "sembol": "XLU",
-     "trend": -0.27,
-     "mom": 4.56,
+     "sembol": "KRE",
+     "trend": -3.29,
+     "mom": 4.94,
      "kadran": "gucl",
      "kadran_ad": "Güçlenen",
-     "rel_1a": 3.6,
-     "rel_3a": -11.7,
-     "rel_6a": -16.1,
-     "evre": 4,
-     "evre_ad": "Evre 4 · Düşüş",
-     "sma200": 44.29729995727539,
-     "fiyat": 41.88,
+     "rel_1a": -0.8,
+     "rel_3a": -10.8,
+     "rel_6a": -6.7,
+     "evre": 3,
+     "evre_ad": "Evre 3 · Tepe",
+     "sma200": 70.79889980316162,
+     "fiyat": 70.62,
      "skor": 50
     },
     {
-     "sembol": "XLRE",
-     "trend": -1.56,
-     "mom": 6.12,
-     "kadran": "gucl",
-     "kadran_ad": "Güçlenen",
-     "rel_1a": 0.1,
-     "rel_3a": -8.7,
-     "rel_6a": -12.4,
-     "evre": 4,
-     "evre_ad": "Evre 4 · Düşüş",
-     "sma200": 43.26235004425049,
-     "fiyat": 42.38,
+     "sembol": "SMH",
+     "trend": -4.19,
+     "mom": -11.36,
+     "kadran": "geride",
+     "kadran_ad": "Geride",
+     "rel_1a": -8.3,
+     "rel_3a": -8.8,
+     "rel_6a": 8.0,
+     "evre": 2,
+     "evre_ad": "Evre 2 · Yükseliş",
+     "sma200": 514.0479508972168,
+     "fiyat": 556.7,
      "skor": 45
     },
     {
-     "sembol": "KRE",
-     "trend": -2.95,
-     "mom": 4.22,
+     "sembol": "XLU",
+     "trend": -0.42,
+     "mom": 3.9,
      "kadran": "gucl",
      "kadran_ad": "Güçlenen",
-     "rel_1a": -1.3,
-     "rel_3a": -9.5,
-     "rel_6a": -7.8,
-     "evre": 3,
-     "evre_ad": "Evre 3 · Tepe",
-     "sma200": 70.77859977722169,
-     "fiyat": 70.62,
+     "rel_1a": 3.7,
+     "rel_3a": -13.8,
+     "rel_6a": -15.1,
+     "evre": 4,
+     "evre_ad": "Evre 4 · Düşüş",
+     "sma200": 44.29379995346069,
+     "fiyat": 42.0,
      "skor": 40
     },
     {
-     "sembol": "SMH",
-     "trend": -5.54,
-     "mom": -13.99,
+     "sembol": "XLC",
+     "trend": -3.14,
+     "mom": -1.29,
      "kadran": "geride",
      "kadran_ad": "Geride",
-     "rel_1a": -7.8,
-     "rel_3a": -9.8,
-     "rel_6a": 8.3,
-     "evre": 3,
-     "evre_ad": "Evre 3 · Tepe",
-     "sma200": 513.1524008178711,
-     "fiyat": 546.36,
+     "rel_1a": -4.0,
+     "rel_3a": -1.3,
+     "rel_6a": -16.3,
+     "evre": 4,
+     "evre_ad": "Evre 4 · Düşüş",
+     "sma200": 113.38809986114502,
+     "fiyat": 108.97,
      "skor": 35
     },
     {
-     "sembol": "XLC",
-     "trend": -1.59,
-     "mom": 0.22,
+     "sembol": "XLRE",
+     "trend": -2.72,
+     "mom": 5.62,
      "kadran": "gucl",
      "kadran_ad": "Güçlenen",
-     "rel_1a": -3.4,
-     "rel_3a": -2.0,
-     "rel_6a": -15.2,
-     "evre": 4,
-     "evre_ad": "Evre 4 · Düşüş",
-     "sma200": 113.43199985504151,
-     "fiyat": 110.19,
-     "skor": 30
-    },
-    {
-     "sembol": "IWM",
-     "trend": -4.34,
-     "mom": 1.1,
-     "kadran": "gucl",
-     "kadran_ad": "Güçlenen",
-     "rel_1a": -2.8,
-     "rel_3a": -9.0,
-     "rel_6a": -8.8,
-     "evre": 3,
-     "evre_ad": "Evre 3 · Tepe",
-     "sma200": 277.91100082397463,
-     "fiyat": 275.78,
-     "skor": 25
-    },
-    {
-     "sembol": "XLI",
-     "trend": -3.9,
-     "mom": 0.55,
-     "kadran": "gucl",
-     "kadran_ad": "Güçlenen",
-     "rel_1a": -1.3,
-     "rel_3a": -9.6,
+     "rel_1a": -1.0,
+     "rel_3a": -11.2,
      "rel_6a": -11.9,
      "evre": 4,
      "evre_ad": "Evre 4 · Düşüş",
-     "sma200": 173.07299949645997,
-     "fiyat": 166.8,
+     "sma200": 43.270500049591064,
+     "fiyat": 42.06,
+     "skor": 30
+    },
+    {
+     "sembol": "XLI",
+     "trend": -3.33,
+     "mom": 2.73,
+     "kadran": "gucl",
+     "kadran_ad": "Güçlenen",
+     "rel_1a": -1.1,
+     "rel_3a": -12.2,
+     "rel_6a": -10.3,
+     "evre": 1,
+     "evre_ad": "Evre 1 · Taban",
+     "sma200": 173.11529945373536,
+     "fiyat": 168.31,
+     "skor": 25
+    },
+    {
+     "sembol": "IWM",
+     "trend": -4.43,
+     "mom": 1.82,
+     "kadran": "gucl",
+     "kadran_ad": "Güçlenen",
+     "rel_1a": -3.7,
+     "rel_3a": -10.1,
+     "rel_6a": -8.7,
+     "evre": 3,
+     "evre_ad": "Evre 3 · Tepe",
+     "sma200": 278.02975090026854,
+     "fiyat": 276.48,
      "skor": 20
     },
     {
-     "sembol": "ITB",
-     "trend": -4.12,
-     "mom": 4.62,
-     "kadran": "gucl",
-     "kadran_ad": "Güçlenen",
-     "rel_1a": -0.4,
-     "rel_3a": -11.4,
-     "rel_6a": -22.0,
+     "sembol": "BOTZ",
+     "trend": -5.81,
+     "mom": -3.78,
+     "kadran": "geride",
+     "kadran_ad": "Geride",
+     "rel_1a": -6.7,
+     "rel_3a": -6.8,
+     "rel_6a": -18.8,
      "evre": 4,
      "evre_ad": "Evre 4 · Düşüş",
-     "sma200": 96.58900009155273,
-     "fiyat": 87.32,
+     "sma200": 36.761675119400024,
+     "fiyat": 33.59,
      "skor": 15
     },
     {
-     "sembol": "BOTZ",
-     "trend": -5.53,
-     "mom": -4.63,
-     "kadran": "geride",
-     "kadran_ad": "Geride",
-     "rel_1a": -5.6,
-     "rel_3a": -6.6,
-     "rel_6a": -17.8,
-     "evre": 4,
-     "evre_ad": "Evre 4 · Düşüş",
-     "sma200": 36.781775121688845,
-     "fiyat": 33.59,
-     "skor": 10
-    },
-    {
      "sembol": "GRID",
-     "trend": -6.42,
-     "mom": -6.76,
+     "trend": -5.29,
+     "mom": -3.42,
      "kadran": "geride",
      "kadran_ad": "Geride",
      "rel_1a": -6.7,
      "rel_3a": -9.9,
-     "rel_6a": -16.3,
+     "rel_6a": -16.0,
      "evre": 3,
      "evre_ad": "Evre 3 · Tepe",
-     "sma200": 178.33545028686524,
-     "fiyat": 167.91,
+     "sma200": 178.40165031433105,
+     "fiyat": 170.5,
+     "skor": 10
+    },
+    {
+     "sembol": "ITB",
+     "trend": -5.15,
+     "mom": 5.35,
+     "kadran": "gucl",
+     "kadran_ad": "Güçlenen",
+     "rel_1a": -4.9,
+     "rel_3a": -13.2,
+     "rel_6a": -21.9,
+     "evre": 4,
+     "evre_ad": "Evre 4 · Düşüş",
+     "sma200": 96.53050010681153,
+     "fiyat": 86.57,
      "skor": 5
     }
    ],
@@ -4623,13 +4618,12 @@
       "sembol": "^IXIC",
       "ad": "Nasdaq",
       "genel": true,
-      "hacim": 6999145000.0,
-      "degisim": -7.14,
-      "fark": -538515000.0,
+      "hacim": 6898345000.0,
+      "degisim": -9.95,
+      "fark": -762015000.0,
       "oran": 89,
-      "medyan": 7891455000.0,
+      "medyan": 7744420000.0,
       "bars": [
-       8491740000.0,
        8078820000.0,
        7275260000.0,
        7030730000.0,
@@ -4648,22 +4642,22 @@
        10869960000.0,
        9505000000.0,
        7537660000.0,
-       6999145000.0
+       7660360000.0,
+       6898345000.0
       ],
-      "tarih": "2026-10-20",
-      "fiyat_gun": -0.02
+      "tarih": "2026-10-21",
+      "fiyat_gun": 1.05
      },
      {
       "sembol": "^NYA",
       "ad": "NYSE",
       "genel": true,
-      "hacim": 4587260000.0,
-      "degisim": -16.32,
-      "fark": -894800000.0,
-      "oran": 90,
+      "hacim": 5004770000.0,
+      "degisim": 9.1,
+      "fark": 417510000.0,
+      "oran": 98,
       "medyan": 5120430000.0,
       "bars": [
-       5286270000.0,
        5110910000.0,
        5316390000.0,
        4499180000.0,
@@ -4682,22 +4676,22 @@
        5955580000.0,
        6055670000.0,
        5482060000.0,
-       4587260000.0
+       4587260000.0,
+       5004770000.0
       ],
-      "tarih": "2026-10-19",
-      "fiyat_gun": 0.93
+      "tarih": "2026-10-20",
+      "fiyat_gun": 0.26
      },
      {
       "sembol": "SPY",
       "ad": "SPY",
       "genel": false,
-      "hacim": 34904800.0,
-      "degisim": -9.76,
-      "fark": -3775300.0,
-      "oran": 84,
+      "hacim": 31812600.0,
+      "degisim": -9.23,
+      "fark": -3235800.0,
+      "oran": 77,
       "medyan": 41562800.0,
       "bars": [
-       54931700.0,
        43983700.0,
        36666700.0,
        42694500.0,
@@ -4716,22 +4710,22 @@
        43261600.0,
        64384600.0,
        38680100.0,
-       34904800.0
+       35048400.0,
+       31812600.0
       ],
-      "tarih": "2026-10-20",
-      "fiyat_gun": 0.34
+      "tarih": "2026-10-21",
+      "fiyat_gun": 0.53
      },
      {
       "sembol": "QQQ",
       "ad": "QQQ",
       "genel": false,
-      "hacim": 30277300.0,
-      "degisim": -18.6,
-      "fark": -6919400.0,
-      "oran": 95,
-      "medyan": 31737800.0,
+      "hacim": 32034100.0,
+      "degisim": 4.97,
+      "fark": 1515600.0,
+      "oran": 105,
+      "medyan": 30401150.0,
       "bars": [
-       33191800.0,
        29000900.0,
        30283800.0,
        41775000.0,
@@ -4750,22 +4744,22 @@
        49828700.0,
        66926700.0,
        37196700.0,
-       30277300.0
+       30518500.0,
+       32034100.0
       ],
-      "tarih": "2026-10-20",
-      "fiyat_gun": -0.1
+      "tarih": "2026-10-21",
+      "fiyat_gun": 1.05
      },
      {
       "sembol": "SMH",
       "ad": "SMH",
       "genel": false,
-      "hacim": 7453300.0,
-      "degisim": -8.87,
-      "fark": -725400.0,
-      "oran": 120,
+      "hacim": 7687000.0,
+      "degisim": 2.36,
+      "fark": 177100.0,
+      "oran": 124,
       "medyan": 6188300.0,
       "bars": [
-       6116400.0,
        5645400.0,
        4656600.0,
        5823900.0,
@@ -4784,22 +4778,22 @@
        15090000.0,
        18387600.0,
        8178700.0,
-       7453300.0
+       7509900.0,
+       7687000.0
       ],
-      "tarih": "2026-10-20",
-      "fiyat_gun": -0.38
+      "tarih": "2026-10-21",
+      "fiyat_gun": 1.89
      },
      {
       "sembol": "RSP",
       "ad": "RSP",
       "genel": false,
-      "hacim": 7134600.0,
-      "degisim": 19.46,
-      "fark": 1162200.0,
-      "oran": 97,
+      "hacim": 7888100.0,
+      "degisim": 10.56,
+      "fark": 753500.0,
+      "oran": 107,
       "medyan": 7361100.0,
       "bars": [
-       5964300.0,
        7709200.0,
        5651200.0,
        8139600.0,
@@ -4818,22 +4812,22 @@
        13304000.0,
        10003100.0,
        5972400.0,
-       7134600.0
+       7134600.0,
+       7888100.0
       ],
-      "tarih": "2026-10-20",
-      "fiyat_gun": 1.15
+      "tarih": "2026-10-21",
+      "fiyat_gun": 0.36
      },
      {
       "sembol": "IWM",
       "ad": "IWM",
       "genel": false,
-      "hacim": 26390500.0,
-      "degisim": 34.79,
-      "fark": 6811900.0,
-      "oran": 106,
+      "hacim": 15846700.0,
+      "degisim": -40.05,
+      "fark": -10586900.0,
+      "oran": 64,
       "medyan": 24892900.0,
       "bars": [
-       24351400.0,
        27307900.0,
        22604100.0,
        24939000.0,
@@ -4852,19 +4846,20 @@
        32395800.0,
        33865000.0,
        19578600.0,
-       26390500.0
+       26433600.0,
+       15846700.0
       ],
-      "tarih": "2026-10-20",
-      "fiyat_gun": 1.66
+      "tarih": "2026-10-21",
+      "fiyat_gun": 0.25
      }
     ],
-    "sonuc": "Sessiz gün — ne alıcı ne satıcı baskın. Piyasa toplam hacmi (Nasdaq+NYSE) 20 günlük medyanın %89'i · SPY +%0,34.",
+    "sonuc": "Sessiz gün — ne alıcı ne satıcı baskın. Piyasa toplam hacmi (Nasdaq+NYSE) 20 günlük medyanın %93'i · SPY +%0,53.",
     "ton": "neu"
    },
    "momentum_stres": {
-    "mtum_vol": 25.31,
-    "spy_vol": 10.98,
-    "oran": 2.31,
+    "mtum_vol": 24.49,
+    "spy_vol": 11.01,
+    "oran": 2.22,
     "etiket": "aşırı stres",
     "esikler": {
      "yuksek": 1.4,
@@ -4872,19 +4867,19 @@
     }
    },
    "vix": {
-    "vix": 17.31,
-    "vix3m": 18.99,
-    "oran": 0.91,
+    "vix": 16.68,
+    "vix3m": 18.72,
+    "oran": 0.89,
     "yapi": "contango (sakin)"
    },
    "takvim": {
     "opex": "2026-11-20",
-    "opex_is_gunu": 22,
-    "opex_takvim_gunu": 30,
+    "opex_is_gunu": 21,
+    "opex_takvim_gunu": 29,
     "ceyreklik": false,
     "pencere_acik": false,
     "fomc": "2026-10-28",
-    "fomc_gun": 7
+    "fomc_gun": 6
    },
    "bilanco": {
     "kaynak_tarihi": "2026-09-25",
@@ -4900,35 +4895,31 @@
    "izleme": [
     {
      "seviye": "YÜKSEK",
-     "metin": "Kırık trend (Evre 4): XLU (200G 44,30), XLRE (200G 43,26), XLC (200G 113,43), XLI (200G 173,07) — 200 günlük ortalama geri alınana kadar zayıf kadro sayılır."
+     "metin": "Kırık trend (Evre 4): XLU (200G 44,29), XLC (200G 113,39), XLRE (200G 43,27), BOTZ (200G 36,76) — 200 günlük ortalama geri alınana kadar zayıf kadro sayılır."
     },
     {
      "seviye": "ORTA",
-     "metin": "Momentum faktör stresi aşırı stres: MTUM/SPY oynaklık oranı 2,31 (eşik 1,4). Kalabalık momentum pozisyonlarında hareket sertleşebilir."
+     "metin": "Momentum faktör stresi aşırı stres: MTUM/SPY oynaklık oranı 2,22 (eşik 1,4). Kalabalık momentum pozisyonlarında hareket sertleşebilir."
     },
     {
      "seviye": "ORTA",
-     "metin": "SPY için 768,29 (50G) ilk izleme seviyesi; fiyat 769,05, mesafe %0,1."
+     "metin": "SPY için 768,34 (50G) ilk izleme seviyesi; fiyat 773,09, mesafe %0,6."
     },
     {
      "seviye": "İZLEME",
-     "metin": "QQQ 50G (726,62) altında; üstüne dönüş geniş katılım teyidi olur."
+     "metin": "QQQ 50G (726,75) altında; üstüne dönüş geniş katılım teyidi olur."
     },
     {
      "seviye": "İZLEME",
-     "metin": "IWM 50G (287,98) altında; üstüne dönüş geniş katılım teyidi olur."
+     "metin": "IWM 50G (287,49) altında; üstüne dönüş geniş katılım teyidi olur."
     },
     {
      "seviye": "İZLEME",
-     "metin": "SMH 50G (577,88) altında; üstüne dönüş geniş katılım teyidi olur."
+     "metin": "SMH 50G (577,56) altında; üstüne dönüş geniş katılım teyidi olur."
     },
     {
      "seviye": "İZLEME",
-     "metin": "Lider kadrana yeni girenler: RSP, XLB."
-    },
-    {
-     "seviye": "İZLEME",
-     "metin": "ISRG 200 günlük ortalamaya çok yakın (%−0,1) — portföy adayı için kritik seviye."
+     "metin": "Lider kadrodan çıkanlar: RSP, XLB."
     },
     {
      "seviye": "İZLEME",
@@ -4936,28 +4927,28 @@
     }
    ],
    "kayit": {
-    "saglik": 57,
+    "saglik": 58,
     "rotasyon": {
      "XLE": "lider",
-     "XLV": "lider",
      "IGV": "zayif",
+     "XLV": "lider",
      "XLP": "lider",
-     "RSP": "lider",
      "XLK": "geride",
-     "XLB": "lider",
+     "RSP": "gucl",
      "XLY": "lider",
-     "XBI": "gucl",
      "XLF": "gucl",
-     "XLU": "gucl",
-     "XLRE": "gucl",
+     "XLB": "gucl",
+     "XBI": "gucl",
      "KRE": "gucl",
      "SMH": "geride",
-     "XLC": "gucl",
-     "IWM": "gucl",
+     "XLU": "gucl",
+     "XLC": "geride",
+     "XLRE": "gucl",
      "XLI": "gucl",
-     "ITB": "gucl",
+     "IWM": "gucl",
      "BOTZ": "geride",
-     "GRID": "geride"
+     "GRID": "geride",
+     "ITB": "gucl"
     }
    }
   }
@@ -4965,17 +4956,17 @@
  "yorum": {
   "ozet": "Makro rejim skoru 43/100 ile 'Nötr / Karışık' bölgesinde. En zayıf ayak Enflasyon Riski (0), en güçlü ayak Risk İştahı (62).",
   "hikaye": [
-   "Brent 110,23 ile kırmızı eşik 100'in üstünde. (Enflasyon Riski)",
-   "10Y Hazine 5,12 ile kırmızı eşik 5,00'in üstünde. (Faiz Baskısı)",
-   "S&P 500 / 200G ortalama 5,94 ile yeşil eşiğin (3) iyi tarafında.",
+   "Brent 110,35 ile kırmızı eşik 100'in üstünde. (Enflasyon Riski)",
+   "10Y Hazine 5,15 ile kırmızı eşik 5,00'in üstünde. (Faiz Baskısı)",
+   "S&P 500 / 200G ortalama 6,49 ile yeşil eşiğin (3) iyi tarafında.",
    "Şu an geçerli senaryo: Baz · Faiz yüksek platoda, piyasa yatay, Aşağı · Faiz %5,30'u aşar, satış baskısı."
   ],
-  "teknik": "Teknik sağlık skoru 57/100 (Kararsız). En güçlü ayak Bilanço (10.0/10: HBK tutturma %86,9 (5Y ort. %78)), en zayıf ayak Momentum (2.6/10: Güçlü: DIA, RSP · faktör stresi aşırı stres). Sessiz gün — ne alıcı ne satıcı baskın. Piyasa toplam hacmi (Nasdaq+NYSE) 20 günlük medyanın %89'i · SPY +%0,34.",
-  "portfoy": "Öne çıkan işaretler — SPCX: Geri çekilme bölgesi (zirveden %30) · VRT: Geri çekilme bölgesi (zirveden %46), 200G altında, RSI 26 · aşırı satım · NVDA: 200G üstünde · QCOM: Geri çekilme bölgesi (zirveden %30), 200G üstünde · RKLB: Geri çekilme bölgesi (zirveden %66), 200G altında, RSI 26 · aşırı satım · ISRG: Geri çekilme bölgesi (zirveden %26), 200G altında",
+  "teknik": "Teknik sağlık skoru 58/100 (Kararsız). En güçlü ayak Bilanço (10.0/10: HBK tutturma %86,9 (5Y ort. %78)), en zayıf ayak Rotasyon (3.0/10: 4 lider · 10 güçlenen · 1 zayıflayan). Sessiz gün — ne alıcı ne satıcı baskın. Piyasa toplam hacmi (Nasdaq+NYSE) 20 günlük medyanın %93'i · SPY +%0,53.",
+  "portfoy": "Öne çıkan işaretler — SPCX: Geri çekilme bölgesi (zirveden %25) · VRT: Geri çekilme bölgesi (zirveden %44), 200G altında · NVDA: 200G üstünde · QCOM: Geri çekilme bölgesi (zirveden %29), 200G üstünde · RKLB: Geri çekilme bölgesi (zirveden %64), 200G altında · ISRG: Geri çekilme bölgesi (zirveden %28), 200G altında",
   "izle": [
-   "10Y Hazine şu an 5,12; Yukarı senaryosu için < 5,05.",
-   "Dolar Endeksi (DXY) şu an 101,78; Yukarı senaryosu için < 99.",
-   "10Y Hazine şu an 5,12; Aşağı senaryosu için > 5,30."
+   "10Y Hazine şu an 5,15; Yukarı senaryosu için < 5,05.",
+   "Dolar Endeksi (DXY) şu an 101,64; Yukarı senaryosu için < 99.",
+   "10Y Hazine şu an 5,15; Aşağı senaryosu için > 5,30."
   ],
   "kaynak": "şablon"
  }
