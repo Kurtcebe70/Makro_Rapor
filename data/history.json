@@ -1098,5 +1098,55 @@
 "XLC": "geride",
 "GRID": "geride"
 }
+},
+"2026-10-28": {
+"skor": 43,
+"etiket": "Nötr / Karışık",
+"sinyal": {
+"us10y": 0,
+"dxy": 0,
+"vix": 0,
+"spx_vs_200": 1,
+"breadth": 0,
+"rsp_rel_3m": -1,
+"brent": -1
+},
+"deger": {
+"spx": 7722.6001,
+"ndx": 26477.8105,
+"dji": 52377.6016,
+"rut": 2818.8701,
+"vix": 17.52,
+"move": 97.87,
+"wti": 101.21,
+"brent": 110.84,
+"gold": 4059.8999,
+"btc": 80785.75,
+"us10y": 4.993,
+"dxy": 102.377
+},
+"saglik": 64,
+"rotasyon": {
+"IGV": "lider",
+"XLE": "zayif",
+"XLV": "lider",
+"XLK": "geride",
+"XBI": "gucl",
+"XLP": "lider",
+"RSP": "lider",
+"XLY": "lider",
+"XLF": "gucl",
+"XLB": "lider",
+"SMH": "geride",
+"XLU": "lider",
+"KRE": "lider",
+"IWM": "gucl",
+"XLRE": "gucl",
+"XLI": "gucl",
+"ITB": "lider",
+"BOTZ": "geride",
+"GRID": "geride",
+"XLC": "geride"
+}
 }
 }
