@@ -1298,5 +1298,55 @@
 "XLC": "geride",
 "BOTZ": "gucl"
 }
+},
+"2026-11-03": {
+"skor": 64,
+"etiket": "Risk Açık",
+"sinyal": {
+"us10y": 0,
+"dxy": 0,
+"vix": 0,
+"spx_vs_200": 1,
+"breadth": 1,
+"rsp_rel_3m": 1,
+"brent": -1
+},
+"deger": {
+"spx": 7541.3999,
+"ndx": 25164.3105,
+"dji": 51983.9805,
+"rut": 2805.8799,
+"vix": 21.61,
+"move": 100.36,
+"wti": 98.07,
+"brent": 106.42,
+"gold": 3916.8,
+"btc": 76863.5312,
+"us10y": 4.894,
+"dxy": 101.773
+},
+"saglik": 51,
+"rotasyon": {
+"XLV": "lider",
+"XLE": "zayif",
+"XLP": "lider",
+"XLB": "lider",
+"ITB": "lider",
+"XLF": "lider",
+"RSP": "lider",
+"XLY": "lider",
+"XLU": "lider",
+"XLRE": "lider",
+"XBI": "gucl",
+"KRE": "lider",
+"IGV": "geride",
+"IWM": "lider",
+"XLI": "lider",
+"XLK": "geride",
+"XLC": "geride",
+"GRID": "gucl",
+"BOTZ": "gucl",
+"SMH": "geride"
+}
 }
 }
